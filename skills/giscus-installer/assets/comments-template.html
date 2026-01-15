@@ -1,0 +1,56 @@
+{% if page.meta.comments %}
+  <div id="giscus-container" style="display: none;">
+    <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="OWNER/REPO"
+      data-repo-id="REPO_ID"
+      data-category="Comments"
+      data-category-id="CATEGORY_ID"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="preferred_color_scheme"
+      data-lang="en"
+      crossorigin="anonymous"
+      async
+    ></script>
+  </div>
+
+  <script>
+    function showGiscusComments() {
+      var container = document.getElementById("giscus-container");
+      if (container) {
+        container.style.display = "block";
+        container.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    // Use event capturing to catch clicks before Material's disabled fieldset blocks them
+    document.addEventListener("click", function(e) {
+      var target = e.target.closest(".md-feedback__icon");
+      if (target) {
+        showGiscusComments();
+      }
+    }, true);
+
+    // Also watch for feedback note becoming visible (backup trigger)
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === "attributes" && mutation.attributeName === "data-md-visible") {
+          var note = mutation.target;
+          if (note.hasAttribute("data-md-visible")) {
+            showGiscusComments();
+          }
+        }
+      });
+    });
+
+    var notes = document.querySelectorAll(".md-feedback__note");
+    notes.forEach(function(note) {
+      observer.observe(note, { attributes: true });
+    });
+  </script>
+{% endif %}

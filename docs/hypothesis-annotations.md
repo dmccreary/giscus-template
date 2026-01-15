@@ -1,5 +1,8 @@
 # Adding Hypothesis Annotations to MkDocs
 
+!!! warning "Not Fully Tested"
+    This integration has not been fully tested because Hypothesis does not accept Gmail addresses for account registration. The code is based on Hypothesis documentation and should work, but please report any issues.
+
 [Hypothesis](https://web.hypothes.is/) is an open-source annotation tool that allows users to highlight text and add comments directly on any web page. This guide walks you through adding Hypothesis to your MkDocs Material site.
 
 ## What is Hypothesis?
@@ -49,13 +52,15 @@ Create a new directory and file for the Hypothesis integration.
 
 ### Create the Directory
 
+Create a JavaScript directory within the docs if it does not already exist.
+
 ```bash
-mkdir -p docs/javascripts
+mkdir -p docs/js
 ```
 
 ### Create the JavaScript File
 
-Create `docs/javascripts/hypothesis.js` with the following content:
+Create `docs/js/hypothesis.js` with the following content:
 
 ```javascript
 // Hypothesis Annotation Integration for MkDocs Material
@@ -109,7 +114,7 @@ Add the JavaScript file to your `mkdocs.yml` configuration:
 
 ```yaml
 extra_javascript:
-  - javascripts/hypothesis.js
+  - js/hypothesis.js
 ```
 
 If you already have `extra_javascript` entries, add it to the list:
@@ -117,7 +122,7 @@ If you already have `extra_javascript` entries, add it to the list:
 ```yaml
 extra_javascript:
   - js/extra.js
-  - javascripts/hypothesis.js
+  - js/hypothesis.js
 ```
 
 ## Step 3: Test Locally
@@ -144,11 +149,17 @@ To moderate or view annotations, create a Hypothesis account:
 2. Create an account
 3. Verify your email
 
+!!! warning "Email Restrictions"
+    Hypothesis does **not accept Gmail addresses** for registration. You will need to use a non-Gmail email address (such as a work, school, or other email provider) to create an account. This limitation prevented us from fully testing this feature.
+
 As the site owner, you can:
 
 - View all public annotations on your site
 - Create private groups for your class or team
 - Moderate discussions
+
+!!! note "Testing Status"
+    The Hypothesis integration code in this template has not been fully tested due to the email registration restriction. The JavaScript integration should work based on Hypothesis documentation, but please report any issues you encounter.
 
 ## Configuration Options
 
