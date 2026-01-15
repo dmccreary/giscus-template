@@ -5,6 +5,10 @@
 [![Claude Code](https://img.shields.io/badge/Built%20with-Claude%20Code-DA7857?logo=anthropic)](https://claude.ai/code)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
+## View the Live Site
+
+[https://dmccreary.github.io/giscus-template/](https://dmccreary.github.io/giscus-template/)
+
 ## Overview
 
 This template repository provides a complete, working example of integrating [Giscus](https://giscus.app/) (GitHub Discussions-based comments) into MkDocs Material sites. It is designed for educators and developers building intelligent textbooks who want to add community-driven discussions to their documentation.
