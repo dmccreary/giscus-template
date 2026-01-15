@@ -13,6 +13,8 @@ nav:
   - Home: index.md
   - About: about.md
   - Sample Page: sample-page.md
+  - Feedback Options: feedback-options.md
+  - Hypothesis Annotations: hypothesis-annotations.md
   - Tutorial:
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
@@ -58,7 +60,7 @@ theme:
 plugins:
   - search
   - social
-  # Optional: Enable comments for entire folders via .meta.yml files
+  # Optional: Enable or disable comments for entire folders via .meta.yml files
   - meta
 
 markdown_extensions:
