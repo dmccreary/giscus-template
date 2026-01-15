@@ -1,3 +1,6 @@
+---
+comments: false
+---
 # Feedback Options for MkDocs Sites
 
 This page describes various options for collecting user feedback on MkDocs Material sites. You can combine multiple approaches to capture both quick sentiment and detailed responses.

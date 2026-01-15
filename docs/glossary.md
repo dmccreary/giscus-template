@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Glossary of Terms
 
 #### Category ID
