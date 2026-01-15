@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Template site for integrating Giscus comment and feedback with intelligent textbooks.">
+        <meta name="description" content="Template site for integrating feedback and annotations to an intelligent textbooks.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Hypothesis Annotations - Template for Giscus Comments Integration</title>
+        <title>Hypothesis Annotations - Feedback and Annotations</title>
       
     
     
@@ -73,9 +73,9 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Hypothesis Annotations - Template for Giscus Comments Integration" >
+        <meta  property="og:title"  content="Hypothesis Annotations - Feedback and Annotations" >
       
-        <meta  property="og:description"  content="Template site for integrating Giscus comment and feedback with intelligent textbooks." >
+        <meta  property="og:description"  content="Template site for integrating feedback and annotations to an intelligent textbooks." >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/hypothesis-annotations.png" >
       
@@ -89,9 +89,9 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Hypothesis Annotations - Template for Giscus Comments Integration" >
+        <meta  name="twitter:title"  content="Hypothesis Annotations - Feedback and Annotations" >
       
-        <meta  name="twitter:description"  content="Template site for integrating Giscus comment and feedback with intelligent textbooks." >
+        <meta  name="twitter:description"  content="Template site for integrating feedback and annotations to an intelligent textbooks." >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/hypothesis-annotations.png" >
       
@@ -132,7 +132,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Template for Giscus Comments Integration" class="md-header__button md-logo" aria-label="Template for Giscus Comments Integration" data-md-component="logo">
+    <a href=".." title="Feedback and Annotations" class="md-header__button md-logo" aria-label="Feedback and Annotations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -146,7 +146,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Template for Giscus Comments Integration
+            Feedback and Annotations
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -268,13 +268,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Template for Giscus Comments Integration" class="md-nav__button md-logo" aria-label="Template for Giscus Comments Integration" data-md-component="logo">
+    <a href=".." title="Feedback and Annotations" class="md-nav__button md-logo" aria-label="Feedback and Annotations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Template for Giscus Comments Integration
+    Feedback and Annotations
   </label>
   
     <div class="md-nav__source">
@@ -1263,6 +1263,10 @@
 
 
 <h1 id="adding-hypothesis-annotations-to-mkdocs">Adding Hypothesis Annotations to MkDocs</h1>
+<div class="admonition warning">
+<p class="admonition-title">Not Fully Tested</p>
+<p>This integration has not been fully tested because Hypothesis does not accept Gmail addresses for account registration. The code is based on Hypothesis documentation and should work, but please report any issues.</p>
+</div>
 <p><a href="https://web.hypothes.is/">Hypothesis</a> is an open-source annotation tool that allows users to highlight text and add comments directly on any web page. This guide walks you through adding Hypothesis to your MkDocs Material site.</p>
 <h2 id="what-is-hypothesis">What is Hypothesis?</h2>
 <p>Hypothesis enables collaborative annotation of web content. Users can:</p>
@@ -1350,10 +1354,11 @@
 <h2 id="step-1-create-the-hypothesis-javascript-file">Step 1: Create the Hypothesis JavaScript File</h2>
 <p>Create a new directory and file for the Hypothesis integration.</p>
 <h3 id="create-the-directory">Create the Directory</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>docs/javascripts
+<p>Create a JavaScript directory within the docs if it does not already exist.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>docs/js
 </code></pre></div></td></tr></table></div>
 <h3 id="create-the-javascript-file">Create the JavaScript File</h3>
-<p>Create <code>docs/javascripts/hypothesis.js</code> with the following content:</p>
+<p>Create <code>docs/js/hypothesis.js</code> with the following content:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1442,14 +1447,14 @@
 <p>Add the JavaScript file to your <code>mkdocs.yml</code> configuration:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">extra_javascript</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">javascripts/hypothesis.js</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">js/hypothesis.js</span>
 </code></pre></div></td></tr></table></div>
 <p>If you already have <code>extra_javascript</code> entries, add it to the list:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">extra_javascript</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">js/extra.js</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">javascripts/hypothesis.js</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">js/hypothesis.js</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="step-3-test-locally">Step 3: Test Locally</h2>
 <ol>
@@ -1478,12 +1483,20 @@
 <li>Create an account</li>
 <li>Verify your email</li>
 </ol>
+<div class="admonition warning">
+<p class="admonition-title">Email Restrictions</p>
+<p>Hypothesis does <strong>not accept Gmail addresses</strong> for registration. You will need to use a non-Gmail email address (such as a work, school, or other email provider) to create an account. This limitation prevented us from fully testing this feature.</p>
+</div>
 <p>As the site owner, you can:</p>
 <ul>
 <li>View all public annotations on your site</li>
 <li>Create private groups for your class or team</li>
 <li>Moderate discussions</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Testing Status</p>
+<p>The Hypothesis integration code in this template has not been fully tested due to the email registration restriction. The JavaScript integration should work based on Hypothesis documentation, but please report any issues you encounter.</p>
+</div>
 <h2 id="configuration-options">Configuration Options</h2>
 <h3 id="basic-configuration">Basic Configuration</h3>
 <p>The <code>hypothesisConfig</code> function can return various options:</p>
