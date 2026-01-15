@@ -12,13 +12,13 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/giscus-template/tutorial/debugging/">
+        <link rel="canonical" href="https://dmccreary.github.io/giscus-template/tutorial/google-analytics/">
       
       
-        <link rel="prev" href="../google-analytics/">
+        <link rel="prev" href="../customizing-comment-pages/">
       
       
-        <link rel="next" href="../../license/">
+        <link rel="next" href="../debugging/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Debugging - Feedback and Annotations</title>
+        <title>Viewing Feedback in Google Analytics - Feedback and Annotations</title>
       
     
     
@@ -73,11 +73,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Debugging - Feedback and Annotations" >
+        <meta  property="og:title"  content="Viewing Feedback in Google Analytics - Feedback and Annotations" >
       
         <meta  property="og:description"  content="Template site for integrating feedback and annotations to an intelligent textbooks." >
       
-        <meta  property="og:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/tutorial/debugging.png" >
+        <meta  property="og:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/tutorial/google-analytics.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -85,15 +85,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://dmccreary.github.io/giscus-template/tutorial/debugging/" >
+        <meta  property="og:url"  content="https://dmccreary.github.io/giscus-template/tutorial/google-analytics/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Debugging - Feedback and Annotations" >
+        <meta  name="twitter:title"  content="Viewing Feedback in Google Analytics - Feedback and Annotations" >
       
         <meta  name="twitter:description"  content="Template site for integrating feedback and annotations to an intelligent textbooks." >
       
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/tutorial/debugging.png" >
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/tutorial/google-analytics.png" >
       
     
     
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#debugging-guide" class="md-skip">
+        <a href="#viewing-feedback-in-google-analytics" class="md-skip">
           Skip to content
         </a>
       
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Debugging
+              Viewing Feedback in Google Analytics
             
           </span>
         </div>
@@ -541,29 +541,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../google-analytics/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Viewing Feedback in Google Analytics
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -581,7 +558,7 @@
   
   
   <span class="md-ellipsis">
-    Debugging
+    Viewing Feedback in Google Analytics
     
   </span>
   
@@ -594,7 +571,7 @@
   
   
   <span class="md-ellipsis">
-    Debugging
+    Viewing Feedback in Google Analytics
     
   </span>
   
@@ -617,73 +594,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quick-diagnostic-checklist" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick Diagnostic Checklist
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-issues" class="md-nav__link">
+  <a href="#what-data-is-collected" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Issues
+      What Data Is Collected
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Common Issues">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-google-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing Google Analytics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-feedback-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Feedback Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Finding Feedback Events">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#giscus-is-not-installed-on-this-repository" class="md-nav__link">
+  <a href="#step-1-navigate-to-events" class="md-nav__link">
     <span class="md-ellipsis">
-      "Giscus is not installed on this repository"
+      Step 1: Navigate to Events
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#comments-section-doesnt-appear" class="md-nav__link">
+  <a href="#step-2-view-feedback-details" class="md-nav__link">
     <span class="md-ellipsis">
-      Comments Section Doesn't Appear
+      Step 2: View Feedback Details
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#feedback-icons-dont-trigger-comments" class="md-nav__link">
+  <a href="#step-3-analyze-the-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Feedback Icons Don't Trigger Comments
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#theme-not-syncing-lightdark-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      Theme Not Syncing (Light/Dark Mode)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#discussion-not-found-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      "Discussion not found" Error
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comments-work-locally-but-not-when-deployed" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comments Work Locally but Not When Deployed
+      Step 3: Analyze the Data
     </span>
   </a>
   
@@ -695,37 +663,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-browser-developer-tools" class="md-nav__link">
+  <a href="#creating-custom-reports" class="md-nav__link">
     <span class="md-ellipsis">
-      Using Browser Developer Tools
+      Creating Custom Reports
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using Browser Developer Tools">
+    <nav class="md-nav" aria-label="Creating Custom Reports">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#console-commands-for-debugging" class="md-nav__link">
+  <a href="#pages-with-most-negative-feedback" class="md-nav__link">
     <span class="md-ellipsis">
-      Console Commands for Debugging
+      Pages with Most Negative Feedback
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#network-tab-debugging" class="md-nav__link">
+  <a href="#feedback-trends-over-time" class="md-nav__link">
     <span class="md-ellipsis">
-      Network Tab Debugging
+      Feedback Trends Over Time
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#elements-tab-debugging" class="md-nav__link">
+  <a href="#positive-vs-negative-by-section" class="md-nav__link">
     <span class="md-ellipsis">
-      Elements Tab Debugging
+      Positive vs. Negative by Section
     </span>
   </a>
   
@@ -737,37 +705,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-your-configuration" class="md-nav__link">
+  <a href="#understanding-the-metrics" class="md-nav__link">
     <span class="md-ellipsis">
-      Verifying Your Configuration
+      Understanding the Metrics
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Verifying Your Configuration">
+    <nav class="md-nav" aria-label="Understanding the Metrics">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#test-github-discussions-access" class="md-nav__link">
+  <a href="#rating-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Test GitHub Discussions Access
+      Rating Values
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-giscus-app-installation" class="md-nav__link">
+  <a href="#key-questions-to-answer" class="md-nav__link">
     <span class="md-ellipsis">
-      Test Giscus App Installation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-all-configuration-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get All Configuration Values
+      Key Questions to Answer
     </span>
   </a>
   
@@ -779,9 +738,108 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#still-having-issues" class="md-nav__link">
+  <a href="#feedback-widget-vs-giscus-comments" class="md-nav__link">
     <span class="md-ellipsis">
-      Still Having Issues?
+      Feedback Widget vs. Giscus Comments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feedback Widget vs. Giscus Comments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-they-work-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      How They Work Together
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-feedback-events-appearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      No Feedback Events Appearing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events-show-but-no-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Events Show But No Feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cant-find-your-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can't Find Your Property
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Documentation
     </span>
   </a>
   
@@ -791,6 +849,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Debugging
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -896,73 +977,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quick-diagnostic-checklist" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick Diagnostic Checklist
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-issues" class="md-nav__link">
+  <a href="#what-data-is-collected" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Issues
+      What Data Is Collected
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Common Issues">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-google-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing Google Analytics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-feedback-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Feedback Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Finding Feedback Events">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#giscus-is-not-installed-on-this-repository" class="md-nav__link">
+  <a href="#step-1-navigate-to-events" class="md-nav__link">
     <span class="md-ellipsis">
-      "Giscus is not installed on this repository"
+      Step 1: Navigate to Events
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#comments-section-doesnt-appear" class="md-nav__link">
+  <a href="#step-2-view-feedback-details" class="md-nav__link">
     <span class="md-ellipsis">
-      Comments Section Doesn't Appear
+      Step 2: View Feedback Details
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#feedback-icons-dont-trigger-comments" class="md-nav__link">
+  <a href="#step-3-analyze-the-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Feedback Icons Don't Trigger Comments
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#theme-not-syncing-lightdark-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      Theme Not Syncing (Light/Dark Mode)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#discussion-not-found-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      "Discussion not found" Error
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comments-work-locally-but-not-when-deployed" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comments Work Locally but Not When Deployed
+      Step 3: Analyze the Data
     </span>
   </a>
   
@@ -974,37 +1046,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-browser-developer-tools" class="md-nav__link">
+  <a href="#creating-custom-reports" class="md-nav__link">
     <span class="md-ellipsis">
-      Using Browser Developer Tools
+      Creating Custom Reports
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using Browser Developer Tools">
+    <nav class="md-nav" aria-label="Creating Custom Reports">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#console-commands-for-debugging" class="md-nav__link">
+  <a href="#pages-with-most-negative-feedback" class="md-nav__link">
     <span class="md-ellipsis">
-      Console Commands for Debugging
+      Pages with Most Negative Feedback
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#network-tab-debugging" class="md-nav__link">
+  <a href="#feedback-trends-over-time" class="md-nav__link">
     <span class="md-ellipsis">
-      Network Tab Debugging
+      Feedback Trends Over Time
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#elements-tab-debugging" class="md-nav__link">
+  <a href="#positive-vs-negative-by-section" class="md-nav__link">
     <span class="md-ellipsis">
-      Elements Tab Debugging
+      Positive vs. Negative by Section
     </span>
   </a>
   
@@ -1016,37 +1088,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-your-configuration" class="md-nav__link">
+  <a href="#understanding-the-metrics" class="md-nav__link">
     <span class="md-ellipsis">
-      Verifying Your Configuration
+      Understanding the Metrics
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Verifying Your Configuration">
+    <nav class="md-nav" aria-label="Understanding the Metrics">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#test-github-discussions-access" class="md-nav__link">
+  <a href="#rating-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Test GitHub Discussions Access
+      Rating Values
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-giscus-app-installation" class="md-nav__link">
+  <a href="#key-questions-to-answer" class="md-nav__link">
     <span class="md-ellipsis">
-      Test Giscus App Installation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-all-configuration-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get All Configuration Values
+      Key Questions to Answer
     </span>
   </a>
   
@@ -1058,9 +1121,108 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#still-having-issues" class="md-nav__link">
+  <a href="#feedback-widget-vs-giscus-comments" class="md-nav__link">
     <span class="md-ellipsis">
-      Still Having Issues?
+      Feedback Widget vs. Giscus Comments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feedback Widget vs. Giscus Comments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-they-work-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      How They Work Together
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-feedback-events-appearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      No Feedback Events Appearing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events-show-but-no-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Events Show But No Feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cant-find-your-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can't Find Your Property
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Documentation
     </span>
   </a>
   
@@ -1082,7 +1244,7 @@
 
 
   
-    <a href="https://github.com/dmccreary/giscus-template/blob/master/docs/tutorial/debugging.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/giscus-template/blob/master/docs/tutorial/google-analytics.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1090,269 +1252,184 @@
   
 
 
-<h1 id="debugging-guide">Debugging Guide</h1>
-<p>This guide helps you troubleshoot common issues when integrating Giscus comments with MkDocs Material.</p>
-<h2 id="quick-diagnostic-checklist">Quick Diagnostic Checklist</h2>
-<p>Before diving into specific issues, run through this checklist:</p>
+<h1 id="viewing-feedback-in-google-analytics">Viewing Feedback in Google Analytics</h1>
+<p>This guide shows you how to view and analyze feedback data collected by the MkDocs Material feedback widget in Google Analytics 4.</p>
+<h2 id="overview">Overview</h2>
+<p>The MkDocs Material feedback widget (the happy/sad face icons at the bottom of each page) sends anonymous feedback data to Google Analytics. This is separate from Giscus comments and provides quantitative insights into which pages users find helpful.</p>
+<h2 id="what-data-is-collected">What Data Is Collected</h2>
+<p>When a user clicks a feedback icon, Material for MkDocs sends an event to Google Analytics containing:</p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Page URL</td>
+<td>Which page received feedback</td>
+</tr>
+<tr>
+<td>Page Title</td>
+<td>The title of the page</td>
+</tr>
+<tr>
+<td>Rating Value</td>
+<td><code>1</code> for positive (happy face), <code>0</code> for negative (sad face)</td>
+</tr>
+</tbody>
+</table>
+<p>This is lightweight, anonymous feedback. No personal information is collected, and users don't need to log in.</p>
+<h2 id="accessing-google-analytics">Accessing Google Analytics</h2>
+<ol>
+<li>Go to <a href="https://analytics.google.com">analytics.google.com</a></li>
+<li>Sign in with your Google account</li>
+<li>Select your property from the property selector</li>
+</ol>
+<p>Your property ID is configured in <code>mkdocs.yml</code> under <code>extra.analytics.property</code> (e.g., <code>G-ZWKPKVQWVG</code>).</p>
+<h2 id="finding-feedback-events">Finding Feedback Events</h2>
+<h3 id="step-1-navigate-to-events">Step 1: Navigate to Events</h3>
+<ol>
+<li>In the left sidebar, click <strong>Reports</strong></li>
+<li>Expand <strong>Engagement</strong></li>
+<li>Click <strong>Events</strong></li>
+</ol>
+<p>You'll see a list of all events tracked on your site.</p>
+<p><img alt="Google Analytics Events Page" src="../../img/google-analytics-events.png" /></p>
+<h3 id="step-2-view-feedback-details">Step 2: View Feedback Details</h3>
+<ol>
+<li>In the events list, find and click on <strong>feedback</strong></li>
+<li>This opens the detailed feedback event report</li>
+</ol>
+<p><img alt="Google Analytics Feedback Report" src="../../img/google-analytics-feedback.png" /></p>
+<h3 id="step-3-analyze-the-data">Step 3: Analyze the Data</h3>
+<p>The feedback report shows:</p>
 <ul>
-<li>[ ] Is <code>custom_dir: docs/overrides</code> in your <code>mkdocs.yml</code>?</li>
-<li>[ ] Does <code>docs/overrides/partials/comments.html</code> exist?</li>
-<li>[ ] Does your page have <code>comments: true</code> in the front matter?</li>
-<li>[ ] Is the Giscus app installed on your repository?</li>
-<li>[ ] Are GitHub Discussions enabled on your repository?</li>
-<li>[ ] Does your Comments category exist in Discussions?</li>
+<li><strong>Total feedback events</strong> - How many times users clicked feedback icons</li>
+<li><strong>Breakdown by page</strong> - Which pages received feedback</li>
+<li><strong>Rating distribution</strong> - Positive vs. negative feedback counts</li>
+<li><strong>Time trends</strong> - When feedback was submitted</li>
 </ul>
-<h2 id="common-issues">Common Issues</h2>
-<h3 id="giscus-is-not-installed-on-this-repository">"Giscus is not installed on this repository"</h3>
-<p><strong>Symptoms:</strong> Error message appears where comments should be.</p>
-<p><strong>Causes and Solutions:</strong></p>
+<h2 id="creating-custom-reports">Creating Custom Reports</h2>
+<p>For deeper analysis, create custom explorations:</p>
+<h3 id="pages-with-most-negative-feedback">Pages with Most Negative Feedback</h3>
 <ol>
-<li>
-<p><strong>Giscus app not installed</strong></p>
+<li>Go to <strong>Explore</strong> in the left sidebar</li>
+<li>Click <strong>Blank</strong> to create a new exploration</li>
+<li>Add dimensions: <code>Page path</code>, <code>Event name</code></li>
+<li>Add metrics: <code>Event count</code></li>
+<li>Add a filter: <code>Event name</code> equals <code>feedback</code></li>
+<li>Sort by event count descending</li>
+</ol>
+<p>This helps identify content that needs improvement.</p>
+<h3 id="feedback-trends-over-time">Feedback Trends Over Time</h3>
+<ol>
+<li>Create a new exploration</li>
+<li>Add dimension: <code>Date</code></li>
+<li>Add metrics: <code>Event count</code></li>
+<li>Filter by <code>Event name</code> equals <code>feedback</code></li>
+<li>Use a line chart visualization</li>
+</ol>
+<p>This shows if your content improvements are having an impact.</p>
+<h3 id="positive-vs-negative-by-section">Positive vs. Negative by Section</h3>
+<ol>
+<li>Create a new exploration</li>
+<li>Add dimensions: <code>Page path</code>, <code>Event parameter</code> (data value)</li>
+<li>Add metrics: <code>Event count</code></li>
+<li>Filter by <code>Event name</code> equals <code>feedback</code></li>
+<li>Create a pivot table grouped by page path</li>
+</ol>
+<p>This compares how different sections perform.</p>
+<h2 id="understanding-the-metrics">Understanding the Metrics</h2>
+<h3 id="rating-values">Rating Values</h3>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Icon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td>Positive - Page was helpful</td>
+<td>Happy face</td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td>Negative - Page could be improved</td>
+<td>Sad face</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-questions-to-answer">Key Questions to Answer</h3>
 <ul>
-<li>Visit <a href="https://github.com/apps/giscus">github.com/apps/giscus</a></li>
-<li>Click <strong>Install</strong> and select your repository</li>
+<li><strong>Which pages have the most negative feedback?</strong> These need attention first.</li>
+<li><strong>What's the overall positive/negative ratio?</strong> Aim for 80%+ positive.</li>
+<li><strong>Are trends improving over time?</strong> Track the impact of content changes.</li>
+<li><strong>Which chapters perform best?</strong> Learn from what works.</li>
 </ul>
-</li>
-<li>
-<p><strong>Wrong repository in comments.html</strong></p>
+<h2 id="feedback-widget-vs-giscus-comments">Feedback Widget vs. Giscus Comments</h2>
+<p>The feedback widget and Giscus comments serve complementary purposes:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Feedback Widget</th>
+<th>Giscus Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Storage</strong></td>
+<td>Google Analytics</td>
+<td>GitHub Discussions</td>
+</tr>
+<tr>
+<td><strong>User Effort</strong></td>
+<td>One click</td>
+<td>Write a comment</td>
+</tr>
+<tr>
+<td><strong>Authentication</strong></td>
+<td>None required</td>
+<td>GitHub login</td>
+</tr>
+<tr>
+<td><strong>Detail Level</strong></td>
+<td>Binary (good/bad)</td>
+<td>Full text comments</td>
+</tr>
+<tr>
+<td><strong>Response Time</strong></td>
+<td>Instant</td>
+<td>Requires reading</td>
+</tr>
+<tr>
+<td><strong>Best For</strong></td>
+<td>Quick sentiment</td>
+<td>Detailed feedback</td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-they-work-together">How They Work Together</h3>
+<p>In this template, both systems are integrated:</p>
+<ol>
+<li><strong>User sees feedback icons</strong> at the bottom of the page</li>
+<li><strong>User clicks an icon</strong> (positive or negative)</li>
+<li><strong>Rating is sent to Google Analytics</strong> for aggregate tracking</li>
+<li><strong>Giscus comment form appears</strong> inviting detailed feedback</li>
+<li><strong>User can optionally write a comment</strong> stored in GitHub Discussions</li>
+</ol>
+<p>This two-step approach captures both:</p>
 <ul>
-<li>Check that <code>data-repo</code> matches your actual repository</li>
-<li>Format should be <code>username/repo-name</code> (e.g., <code>dmccreary/giscus-template</code>)</li>
+<li><strong>Quantitative data</strong> - How many people found each page helpful (Analytics)</li>
+<li><strong>Qualitative data</strong> - Why they felt that way (Discussions)</li>
 </ul>
-</li>
-<li>
-<p><strong>Repository ID mismatch</strong></p>
-<ul>
-<li>Get the correct ID from <a href="https://giscus.app/">giscus.app</a> or via CLI:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>gh<span class="w"> </span>api<span class="w"> </span>graphql<span class="w"> </span>-f<span class="w"> </span><span class="nv">query</span><span class="o">=</span><span class="s1">&#39;{repository(owner:&quot;USERNAME&quot;,name:&quot;REPO&quot;){id}}&#39;</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
-</li>
-</ol>
-<h3 id="comments-section-doesnt-appear">Comments Section Doesn't Appear</h3>
-<p><strong>Symptoms:</strong> No comment section visible on the page.</p>
-<p><strong>Debugging Steps:</strong></p>
-<ol>
-<li>
-<p><strong>Check the browser console</strong> (F12 → Console tab)</p>
-<p>Look for JavaScript errors. Common ones:
-- <code>__md_get is not defined</code> - Material theme not loading properly
-- <code>Cannot read property of null</code> - Element selectors failing</p>
-</li>
-<li>
-<p><strong>Verify the template path</strong></p>
-<p>The file must be at exactly:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docs/overrides/partials/comments.html
-</code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p><strong>Check front matter</strong></p>
-<p>Open your markdown file and verify:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
-<span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="nn">---</span>
-</code></pre></div></td></tr></table></div></p>
-<p>The <code>---</code> must be the very first line with no spaces before it.</p>
-</li>
-<li>
-<p><strong>Inspect the HTML</strong></p>
-<p>Right-click on the page → Inspect. Search for:
-- <code>giscus-container</code> - Should exist if template loaded
-- <code>giscus-frame</code> - Should exist if Giscus loaded</p>
-</li>
-</ol>
-<h3 id="feedback-icons-dont-trigger-comments">Feedback Icons Don't Trigger Comments</h3>
-<p><strong>Symptoms:</strong> Clicking happy/sad face doesn't show the comment form.</p>
-<p><strong>Debugging Steps:</strong></p>
-<ol>
-<li>
-<p><strong>Check if feedback widget exists</strong></p>
-<p>Open browser console and run:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.md-feedback&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></p>
-<p>If this returns <code>null</code>, the feedback widget isn't configured in <code>mkdocs.yml</code>.</p>
-</li>
-<li>
-<p><strong>Check feedback button structure</strong></p>
-<p>Run in console:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.md-feedback__icon&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></p>
-<p>Should return a NodeList with 2 elements (happy and sad icons).</p>
-</li>
-<li>
-<p><strong>Verify the fieldset isn't permanently disabled</strong></p>
-<p>Inspect the feedback widget HTML. Look for:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">fieldset</span> <span class="na">disabled</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
-<p>This is normal - Material for MkDocs enables it when ready.</p>
-</li>
-<li>
-<p><strong>Test the click handler manually</strong></p>
-<p>Run in console:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;giscus-container&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;block&quot;</span>
-</code></pre></div></td></tr></table></div></p>
-<p>If the comments appear, the issue is with the click event listener.</p>
-</li>
-<li>
-<p><strong>Check for event capturing</strong></p>
-<p>The click listener must use event capturing (third parameter <code>true</code>):
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">handler</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></p>
-<p>This is necessary because the feedback fieldset is disabled.</p>
-</li>
-</ol>
-<h3 id="theme-not-syncing-lightdark-mode">Theme Not Syncing (Light/Dark Mode)</h3>
-<p><strong>Symptoms:</strong> Comments stay light when you switch to dark mode (or vice versa).</p>
-<p><strong>Causes and Solutions:</strong></p>
-<ol>
-<li>
-<p><strong>Missing palette configuration</strong></p>
-<p>Both schemes must be defined in <code>mkdocs.yml</code>:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">palette</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span><span class="w">    </span><span class="c1"># Light mode</span>
-<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/brightness-7</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slate</span><span class="w">      </span><span class="c1"># Dark mode</span>
-<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/brightness-4</span>
-</code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p><strong>Palette selector not found</strong></p>
-<p>The JavaScript looks for <code>[data-md-component=palette]</code>. If your theme customization removed this, the sync won't work.</p>
-</li>
-<li>
-<p><strong>Giscus iframe not loaded</strong></p>
-<p>The theme sync only works after Giscus loads. Check console for:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.giscus-frame&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></p>
-</li>
-</ol>
-<h3 id="discussion-not-found-error">"Discussion not found" Error</h3>
-<p><strong>Symptoms:</strong> Giscus loads but shows "Discussion not found".</p>
-<p><strong>Causes and Solutions:</strong></p>
-<ol>
-<li>
-<p><strong>Category doesn't exist</strong></p>
-<ul>
-<li>Go to your repository's Discussions tab</li>
-<li>Verify the "Comments" category exists</li>
-<li>Category name must match <code>data-category</code> exactly</li>
-</ul>
-</li>
-<li>
-<p><strong>Category ID mismatch</strong></p>
-<p>Get the correct category ID:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>gh<span class="w"> </span>api<span class="w"> </span>graphql<span class="w"> </span>-f<span class="w"> </span><span class="nv">query</span><span class="o">=</span><span class="s1">&#39;</span>
-<span class="s1">{</span>
-<span class="s1">  repository(owner: &quot;USERNAME&quot;, name: &quot;REPO&quot;) {</span>
-<span class="s1">    discussionCategories(first: 10) {</span>
-<span class="s1">      nodes {</span>
-<span class="s1">        id</span>
-<span class="s1">        name</span>
-<span class="s1">      }</span>
-<span class="s1">    }</span>
-<span class="s1">  }</span>
-<span class="s1">}&#39;</span>
-</code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p><strong>Strict mode enabled</strong></p>
-<p>If <code>data-strict="1"</code>, Giscus requires an exact URL match. Try setting:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>data-strict=&quot;0&quot;
-</code></pre></div></td></tr></table></div></p>
-</li>
-</ol>
-<h3 id="comments-work-locally-but-not-when-deployed">Comments Work Locally but Not When Deployed</h3>
-<p><strong>Symptoms:</strong> Everything works on <code>localhost:8000</code> but fails on GitHub Pages.</p>
-<p><strong>Causes and Solutions:</strong></p>
-<ol>
-<li>
-<p><strong>URL mismatch</strong></p>
-<p>Giscus validates the page URL. Make sure your <code>site_url</code> in <code>mkdocs.yml</code> matches your deployed URL:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">site_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://username.github.io/repo-name/</span>
-</code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p><strong>Cache issues</strong></p>
-<p>Hard refresh the page: <code>Ctrl+Shift+R</code> (Windows/Linux) or <code>Cmd+Shift+R</code> (Mac)</p>
-</li>
-<li>
-<p><strong>GitHub Pages not updated</strong></p>
-<p>Changes can take a few minutes to propagate. Check the Actions tab for deployment status.</p>
-</li>
-</ol>
-<h2 id="using-browser-developer-tools">Using Browser Developer Tools</h2>
-<h3 id="console-commands-for-debugging">Console Commands for Debugging</h3>
-<p><strong>Check if Giscus container exists:</strong>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;giscus-container&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>Check if Giscus iframe loaded:</strong>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.giscus-frame&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>Check feedback widget:</strong>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.md-feedback&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>List all feedback icons:</strong>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.md-feedback__icon&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>Manually show comments:</strong>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;giscus-container&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;block&quot;</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>Check current palette:</strong>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">__md_get</span><span class="p">(</span><span class="s2">&quot;__palette&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></p>
-<h3 id="network-tab-debugging">Network Tab Debugging</h3>
-<ol>
-<li>Open Developer Tools (F12)</li>
-<li>Go to the <strong>Network</strong> tab</li>
-<li>Reload the page</li>
-<li>Filter by "giscus"</li>
-<li>Check if <code>client.js</code> loads successfully (status 200)</li>
-</ol>
-<h3 id="elements-tab-debugging">Elements Tab Debugging</h3>
-<ol>
-<li>Open Developer Tools (F12)</li>
-<li>Go to the <strong>Elements</strong> tab</li>
-<li>Search for <code>giscus</code> (Ctrl+F)</li>
-<li>Verify the script tag has correct attributes</li>
-<li>Check if <code>giscus-frame</code> iframe exists</li>
-</ol>
-<h2 id="verifying-your-configuration">Verifying Your Configuration</h2>
-<h3 id="test-github-discussions-access">Test GitHub Discussions Access</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check if discussions are enabled</span>
-gh<span class="w"> </span>api<span class="w"> </span>repos/USERNAME/REPO<span class="w"> </span>--jq<span class="w"> </span><span class="s1">&#39;.has_discussions&#39;</span>
-
-<span class="c1"># Should return: true</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="test-giscus-app-installation">Test Giscus App Installation</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List installed apps (look for giscus)</span>
-gh<span class="w"> </span>api<span class="w"> </span>repos/USERNAME/REPO/installation<span class="w"> </span>--jq<span class="w"> </span><span class="s1">&#39;.id&#39;</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="get-all-configuration-values">Get All Configuration Values</h3>
+<h2 id="configuration-reference">Configuration Reference</h2>
+<p>The feedback widget is configured in <code>mkdocs.yml</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1367,36 +1444,102 @@ gh<span class="w"> </span>api<span class="w"> </span>repos/USERNAME/REPO/install
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>gh<span class="w"> </span>api<span class="w"> </span>graphql<span class="w"> </span>-f<span class="w"> </span><span class="nv">query</span><span class="o">=</span><span class="s1">&#39;</span>
-<span class="s1">{</span>
-<span class="s1">  repository(owner: &quot;USERNAME&quot;, name: &quot;REPO&quot;) {</span>
-<span class="s1">    id</span>
-<span class="s1">    name</span>
-<span class="s1">    hasDiscussionsEnabled</span>
-<span class="s1">    discussionCategories(first: 10) {</span>
-<span class="s1">      nodes {</span>
-<span class="s1">        id</span>
-<span class="s1">        name</span>
-<span class="s1">        slug</span>
-<span class="s1">      }</span>
-<span class="s1">    }</span>
-<span class="s1">  }</span>
-<span class="s1">}&#39;</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">extra</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">analytics</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">google</span>
+<span class="w">    </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">G-XXXXXXXXXX</span><span class="w">  </span><span class="c1"># Your GA4 property ID</span>
+<span class="w">    </span><span class="nt">feedback</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Was this page helpful?</span>
+<span class="w">      </span><span class="nt">ratings</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/emoticon-happy-outline</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This page was helpful</span>
+<span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">          </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">            </span><span class="no">Thanks for your feedback!</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/emoticon-sad-outline</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This page could be improved</span>
+<span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">          </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">            </span><span class="no">Thanks for your feedback!</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="still-having-issues">Still Having Issues?</h2>
-<p>If you've tried everything above and still have problems:</p>
+<h3 id="configuration-options">Configuration Options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>provider</code></td>
+<td>Analytics provider (<code>google</code> for Google Analytics)</td>
+</tr>
+<tr>
+<td><code>property</code></td>
+<td>Your Google Analytics 4 measurement ID (starts with <code>G-</code>)</td>
+</tr>
+<tr>
+<td><code>feedback.title</code></td>
+<td>The question displayed above the icons</td>
+</tr>
+<tr>
+<td><code>ratings</code></td>
+<td>Array of feedback options (typically 2 choices)</td>
+</tr>
+<tr>
+<td><code>ratings[].icon</code></td>
+<td>Material icon name</td>
+</tr>
+<tr>
+<td><code>ratings[].name</code></td>
+<td>Tooltip text shown on hover</td>
+</tr>
+<tr>
+<td><code>ratings[].data</code></td>
+<td>Numeric value sent to Google Analytics</td>
+</tr>
+<tr>
+<td><code>ratings[].note</code></td>
+<td>Message displayed after user clicks</td>
+</tr>
+</tbody>
+</table>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="no-feedback-events-appearing">No Feedback Events Appearing</h3>
 <ol>
-<li><strong>Check the Giscus documentation:</strong> <a href="https://giscus.app/">giscus.app</a></li>
-<li><strong>Search existing issues:</strong> <a href="https://github.com/giscus/giscus/issues">giscus/giscus/issues</a></li>
-<li><strong>Open an issue on this template:</strong> <a href="https://github.com/dmccreary/giscus-template/issues">dmccreary/giscus-template/issues</a></li>
+<li><strong>Check property ID</strong> - Verify <code>G-XXXXXXXXXX</code> in mkdocs.yml matches your GA4 property</li>
+<li><strong>Wait for processing</strong> - GA4 can take up to 24 hours to show new events</li>
+<li><strong>Check Realtime</strong> - Go to Reports → Realtime to see live events</li>
+<li><strong>Verify deployment</strong> - Feedback only works on deployed sites, not localhost</li>
 </ol>
-<p>When reporting an issue, include:</p>
+<h3 id="events-show-but-no-feedback">Events Show But No Feedback</h3>
+<ol>
+<li>Ensure <code>feedback</code> section exists under <code>analytics</code> in mkdocs.yml</li>
+<li>Check that both rating options are configured</li>
+<li>Verify the site has been redeployed after configuration changes</li>
+</ol>
+<h3 id="cant-find-your-property">Can't Find Your Property</h3>
+<ol>
+<li>Verify you're signed into the correct Google account</li>
+<li>Check if you have access permissions to the property</li>
+<li>Confirm the property ID exists in your GA4 account</li>
+</ol>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Review weekly</strong> - Check feedback trends at least once a week</li>
+<li><strong>Act on negative feedback</strong> - Prioritize pages with high negative ratings</li>
+<li><strong>Track improvements</strong> - Note when you update content and watch for rating changes</li>
+<li><strong>Combine with comments</strong> - Read Giscus comments for context on negative ratings</li>
+<li><strong>Set up alerts</strong> - Configure GA4 to notify you of unusual feedback patterns</li>
+</ol>
+<h2 id="related-documentation">Related Documentation</h2>
 <ul>
-<li>Browser and version</li>
-<li>Error messages from the console</li>
-<li>Relevant configuration from <code>mkdocs.yml</code></li>
-<li>The <code>comments.html</code> file contents</li>
-<li>Screenshots if applicable</li>
+<li><a href="../">Tutorial Introduction</a> - Overview of feedback systems</li>
+<li><a href="../getting-started/">Getting Started</a> - Initial setup guide</li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/">MkDocs Material Analytics</a> - Official documentation</li>
 </ul>
 
 
@@ -1443,7 +1586,7 @@ gh<span class="w"> </span>api<span class="w"> </span>repos/USERNAME/REPO/install
                 
                 
               
-              Thanks for your feedback! Feel free to share what you found helpful in the comments below or or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+Debugging+-+/tutorial/debugging/"  target="_blank" rel="noopener">open an issue</a>.
+              Thanks for your feedback! Feel free to share what you found helpful in the comments below or or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+Viewing%20Feedback%20in%20Google%20Analytics+-+/tutorial/google-analytics/"  target="_blank" rel="noopener">open an issue</a>.
             </div>
           
             <div data-md-value="0" hidden>
@@ -1456,7 +1599,7 @@ gh<span class="w"> </span>api<span class="w"> </span>repos/USERNAME/REPO/install
                 
                 
               
-              Thanks for your feedback! Please share details in the comments below or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+Debugging+-+/tutorial/debugging/"  target="_blank" rel="noopener">open an issue</a>.
+              Thanks for your feedback! Please share details in the comments below or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+Viewing%20Feedback%20in%20Google%20Analytics+-+/tutorial/google-analytics/"  target="_blank" rel="noopener">open an issue</a>.
             </div>
           
         </div>
@@ -1595,7 +1738,7 @@ gh<span class="w"> </span>api<span class="w"> </span>repos/USERNAME/REPO/install
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../google-analytics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Viewing Feedback in Google Analytics">
+          <a href="../customizing-comment-pages/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Customizing Comment Pages">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1605,20 +1748,20 @@ gh<span class="w"> </span>api<span class="w"> </span>repos/USERNAME/REPO/install
                 Previous
               </span>
               <div class="md-ellipsis">
-                Viewing Feedback in Google Analytics
+                Customizing Comment Pages
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../license/" class="md-footer__link md-footer__link--next" aria-label="Next: License">
+          <a href="../debugging/" class="md-footer__link md-footer__link--next" aria-label="Next: Debugging">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                License
+                Debugging
               </div>
             </div>
             <div class="md-footer__button md-icon">
