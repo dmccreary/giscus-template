@@ -1,0 +1,2006 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Template site for integrating Giscus comment and feedback with intelligent textbooks.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/giscus-template/hypothesis-annotations/">
+      
+      
+        <link rel="prev" href="../feedback-options/">
+      
+      
+        <link rel="next" href="../tutorial/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Hypothesis Annotations - Template for Giscus Comments Integration</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-ZWKPKVQWVG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-ZWKPKVQWVG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-ZWKPKVQWVG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Hypothesis Annotations - Template for Giscus Comments Integration" >
+      
+        <meta  property="og:description"  content="Template site for integrating Giscus comment and feedback with intelligent textbooks." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/hypothesis-annotations.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/giscus-template/hypothesis-annotations/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Hypothesis Annotations - Template for Giscus Comments Integration" >
+      
+        <meta  name="twitter:description"  content="Template site for integrating Giscus comment and feedback with intelligent textbooks." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/hypothesis-annotations.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#adding-hypothesis-annotations-to-mkdocs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Template for Giscus Comments Integration" class="md-header__button md-logo" aria-label="Template for Giscus Comments Integration" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Template for Giscus Comments Integration
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hypothesis Annotations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/giscus-template" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Template for Giscus Comments Integration" class="md-nav__button md-logo" aria-label="Template for Giscus Comments Integration" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Template for Giscus Comments Integration
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/giscus-template" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample-page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feedback-options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feedback Options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Hypothesis Annotations
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hypothesis Annotations
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-hypothesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Hypothesis?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-hypothesis-differs-from-giscus" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Hypothesis Differs from Giscus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-create-the-hypothesis-javascript-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create the Hypothesis JavaScript File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Create the Hypothesis JavaScript File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the Directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-javascript-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the JavaScript File
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-update-mkdocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Update mkdocs.yml
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-test-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Test Locally
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-a-hypothesis-account-optional-but-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Create a Hypothesis Account (Optional but Recommended)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#highlight-visibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Highlight Visibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sidebar-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sidebar Behavior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Private Groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-branding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Branding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Loading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#front-matter-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front Matter Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Annotations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewing Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-a-site-visitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      As a Site Visitor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-a-site-owner" class="md-nav__link">
+    <span class="md-ellipsis">
+      As a Site Owner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-hypothesis-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Hypothesis API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sidebar-not-appearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sidebar Not Appearing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotations-not-saving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annotations Not Saving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#highlights-not-showing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Highlights Not Showing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflicts-with-other-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conflicts with Other Scripts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Privacy Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-educational-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Educational Use
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../tutorial/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Tutorial
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-hypothesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Hypothesis?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-hypothesis-differs-from-giscus" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Hypothesis Differs from Giscus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-create-the-hypothesis-javascript-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create the Hypothesis JavaScript File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Create the Hypothesis JavaScript File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the Directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-javascript-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the JavaScript File
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-update-mkdocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Update mkdocs.yml
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-test-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Test Locally
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-a-hypothesis-account-optional-but-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Create a Hypothesis Account (Optional but Recommended)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#highlight-visibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Highlight Visibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sidebar-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sidebar Behavior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Private Groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-branding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Branding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Loading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#front-matter-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front Matter Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Annotations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewing Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-a-site-visitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      As a Site Visitor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-a-site-owner" class="md-nav__link">
+    <span class="md-ellipsis">
+      As a Site Owner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-hypothesis-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Hypothesis API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sidebar-not-appearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sidebar Not Appearing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotations-not-saving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annotations Not Saving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#highlights-not-showing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Highlights Not Showing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflicts-with-other-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conflicts with Other Scripts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Privacy Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-educational-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Educational Use
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/giscus-template/blob/master/docs/hypothesis-annotations.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="adding-hypothesis-annotations-to-mkdocs">Adding Hypothesis Annotations to MkDocs</h1>
+<p><a href="https://web.hypothes.is/">Hypothesis</a> is an open-source annotation tool that allows users to highlight text and add comments directly on any web page. This guide walks you through adding Hypothesis to your MkDocs Material site.</p>
+<h2 id="what-is-hypothesis">What is Hypothesis?</h2>
+<p>Hypothesis enables collaborative annotation of web content. Users can:</p>
+<ul>
+<li>Highlight specific text passages</li>
+<li>Add notes and comments to highlights</li>
+<li>Reply to other users' annotations</li>
+<li>Create public or private annotation groups</li>
+<li>Search and organize annotations</li>
+</ul>
+<p>This is particularly valuable for educational content where students can:</p>
+<ul>
+<li>Ask questions about specific sentences</li>
+<li>Share insights with classmates</li>
+<li>Collaborate on peer review</li>
+<li>Point out exactly where they got confused</li>
+</ul>
+<h2 id="how-hypothesis-differs-from-giscus">How Hypothesis Differs from Giscus</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Hypothesis</th>
+<th>Giscus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotation target</td>
+<td>Specific text selections</td>
+<td>Entire page</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Inline sidebar</td>
+<td>Bottom of page</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>Hypothesis servers</td>
+<td>GitHub Discussions</td>
+</tr>
+<tr>
+<td>Account required</td>
+<td>Hypothesis account</td>
+<td>GitHub account</td>
+</tr>
+<tr>
+<td>Visibility</td>
+<td>Public, private, or group</td>
+<td>Public</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Precise, contextual feedback</td>
+<td>General discussion</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation:</strong> Use both together. Hypothesis for pointing out specific confusing text, Giscus for general questions and discussions.</p>
+<h2 id="installation-methods">Installation Methods</h2>
+<p>There are two ways to enable Hypothesis on your site:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Publisher approach</strong></td>
+<td>Works for all visitors automatically</td>
+<td>You control the integration</td>
+</tr>
+<tr>
+<td><strong>Browser extension</strong></td>
+<td>No site changes needed</td>
+<td>Each user must install extension</td>
+</tr>
+</tbody>
+</table>
+<p>This guide covers the <strong>Publisher approach</strong>, which enables Hypothesis for all visitors.</p>
+<h2 id="step-1-create-the-hypothesis-javascript-file">Step 1: Create the Hypothesis JavaScript File</h2>
+<p>Create a new directory and file for the Hypothesis integration.</p>
+<h3 id="create-the-directory">Create the Directory</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>docs/javascripts
+</code></pre></div></td></tr></table></div>
+<h3 id="create-the-javascript-file">Create the JavaScript File</h3>
+<p>Create <code>docs/javascripts/hypothesis.js</code> with the following content:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Hypothesis Annotation Integration for MkDocs Material</span>
+<span class="c1">// This script loads the Hypothesis sidebar for all visitors</span>
+
+<span class="nb">document</span><span class="nx">$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Check if Hypothesis is already loaded to avoid duplicates</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisConfig</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">// Create the Hypothesis embed script</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">script</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://hypothes.is/embed.js&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">script</span><span class="p">.</span><span class="k">async</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Append to document head</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Set configuration (optional)</span>
+<span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// Uncomment and modify options as needed:</span>
+
+<span class="w">                </span><span class="c1">// Collapse sidebar by default (users click to open)</span>
+<span class="w">                </span><span class="c1">// showHighlights: false,</span>
+
+<span class="w">                </span><span class="c1">// Open sidebar automatically</span>
+<span class="w">                </span><span class="c1">// openSidebar: true,</span>
+
+<span class="w">                </span><span class="c1">// Focus on a specific annotation group</span>
+<span class="w">                </span><span class="c1">// group: &#39;YOUR_GROUP_ID&#39;,</span>
+
+<span class="w">                </span><span class="c1">// Branding options</span>
+<span class="w">                </span><span class="c1">// branding: {</span>
+<span class="w">                </span><span class="c1">//     appBackgroundColor: &#39;white&#39;,</span>
+<span class="w">                </span><span class="c1">//     ctaBackgroundColor: &#39;#3b5998&#39;,</span>
+<span class="w">                </span><span class="c1">//     ctaTextColor: &#39;white&#39;,</span>
+<span class="w">                </span><span class="c1">//     selectionFontFamily: &#39;helvetica, arial, sans serif&#39;</span>
+<span class="w">                </span><span class="c1">// }</span>
+<span class="w">            </span><span class="p">};</span>
+<span class="w">        </span><span class="p">};</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Why use document$.subscribe()?</p>
+<p>MkDocs Material uses "instant loading" which doesn't trigger normal page load events. The <code>document$</code> observable from Material ensures the script runs correctly when navigating between pages.</p>
+</div>
+<h2 id="step-2-update-mkdocsyml">Step 2: Update mkdocs.yml</h2>
+<p>Add the JavaScript file to your <code>mkdocs.yml</code> configuration:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">extra_javascript</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">javascripts/hypothesis.js</span>
+</code></pre></div></td></tr></table></div>
+<p>If you already have <code>extra_javascript</code> entries, add it to the list:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">extra_javascript</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">js/extra.js</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">javascripts/hypothesis.js</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="step-3-test-locally">Step 3: Test Locally</h2>
+<ol>
+<li>
+<p>Start your development server:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdocs<span class="w"> </span>serve
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>Open your browser to <code>http://localhost:8000</code></p>
+</li>
+<li>
+<p>Look for the Hypothesis sidebar on the right side of the page (a small arrow or tab)</p>
+</li>
+<li>
+<p>Click to expand the sidebar</p>
+</li>
+<li>
+<p>Try highlighting some text - you should see an option to annotate</p>
+</li>
+</ol>
+<h2 id="step-4-create-a-hypothesis-account-optional-but-recommended">Step 4: Create a Hypothesis Account (Optional but Recommended)</h2>
+<p>To moderate or view annotations, create a Hypothesis account:</p>
+<ol>
+<li>Visit <a href="https://hypothes.is/signup">hypothes.is/signup</a></li>
+<li>Create an account</li>
+<li>Verify your email</li>
+</ol>
+<p>As the site owner, you can:</p>
+<ul>
+<li>View all public annotations on your site</li>
+<li>Create private groups for your class or team</li>
+<li>Moderate discussions</li>
+</ul>
+<h2 id="configuration-options">Configuration Options</h2>
+<h3 id="basic-configuration">Basic Configuration</h3>
+<p>The <code>hypothesisConfig</code> function can return various options:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Show highlights on page load</span>
+<span class="w">        </span><span class="nx">showHighlights</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+
+<span class="w">        </span><span class="c1">// Open sidebar automatically when page loads</span>
+<span class="w">        </span><span class="nx">openSidebar</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+
+<span class="w">        </span><span class="c1">// Focus on a specific group&#39;s annotations</span>
+<span class="w">        </span><span class="c1">// group: &#39;__world__&#39;,  // Public annotations</span>
+<span class="w">        </span><span class="c1">// group: &#39;YOUR_GROUP_ID&#39;,  // Private group</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="highlight-visibility">Highlight Visibility</h3>
+<p>Control whether highlights are visible by default:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Show all highlights immediately</span>
+<span class="nx">showHighlights</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+
+<span class="c1">// Hide highlights until user opens sidebar</span>
+<span class="nx">showHighlights</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="sidebar-behavior">Sidebar Behavior</h3>
+<p>Control the sidebar on page load:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Sidebar closed by default (recommended)</span>
+<span class="nx">openSidebar</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+
+<span class="c1">// Sidebar open automatically</span>
+<span class="nx">openSidebar</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="private-groups">Private Groups</h3>
+<p>Create a private annotation group for your class:</p>
+<ol>
+<li>Log in to <a href="https://hypothes.is">hypothes.is</a></li>
+<li>Click your username → "Create new group"</li>
+<li>Name your group and set permissions</li>
+<li>Copy the group ID from the URL (e.g., <code>https://hypothes.is/groups/abc123/my-group</code> → <code>abc123</code>)</li>
+<li>Add to your configuration:</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">group</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;abc123&#39;</span><span class="w">  </span><span class="c1">// Your group ID</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<p>Now only group members can see and create annotations.</p>
+<h2 id="advanced-configuration">Advanced Configuration</h2>
+<h3 id="custom-branding">Custom Branding</h3>
+<p>Match Hypothesis colors to your site:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">branding</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">appBackgroundColor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#f5f5f5&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">ctaBackgroundColor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#1976d2&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">ctaTextColor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">selectionFontFamily</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Roboto, sans-serif&#39;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="conditional-loading">Conditional Loading</h3>
+<p>Only load Hypothesis on certain pages:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="nx">$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Only load on pages in the /chapters/ directory</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">&#39;/chapters/&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisConfig</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">script</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://hypothes.is/embed.js&#39;</span><span class="p">;</span>
+<span class="w">            </span><span class="nx">script</span><span class="p">.</span><span class="k">async</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">            </span><span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+<span class="w">            </span><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="p">{};</span>
+<span class="w">            </span><span class="p">};</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="front-matter-control">Front Matter Control</h3>
+<p>You can also control Hypothesis via page front matter (requires additional JavaScript):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="nx">$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Check for a meta tag indicating hypothesis should load</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">hypothesisMeta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;meta[name=&quot;hypothesis&quot;]&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">hypothesisMeta</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">hypothesisMeta</span><span class="p">.</span><span class="nx">content</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;true&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisLoaded</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">script</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://hypothes.is/embed.js&#39;</span><span class="p">;</span>
+<span class="w">            </span><span class="nx">script</span><span class="p">.</span><span class="k">async</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">            </span><span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+<span class="w">            </span><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisLoaded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<p>Then in your markdown files, add a meta tag via front matter (requires custom template).</p>
+<h2 id="viewing-annotations">Viewing Annotations</h2>
+<h3 id="as-a-site-visitor">As a Site Visitor</h3>
+<ol>
+<li>Click the Hypothesis sidebar arrow (right edge of page)</li>
+<li>Log in with your Hypothesis account</li>
+<li>View existing annotations</li>
+<li>Create new annotations by highlighting text</li>
+</ol>
+<h3 id="as-a-site-owner">As a Site Owner</h3>
+<ol>
+<li>Log in to <a href="https://hypothes.is">hypothes.is</a></li>
+<li>Go to your profile → "My Annotations"</li>
+<li>Use the search to filter by URL (your site)</li>
+<li>View, reply to, or moderate annotations</li>
+</ol>
+<h3 id="using-the-hypothesis-api">Using the Hypothesis API</h3>
+<p>Query annotations programmatically:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>curl<span class="w"> </span><span class="s2">&quot;https://hypothes.is/api/search?uri=https://yoursite.github.io/page/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_API_KEY&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>Get an API key from your <a href="https://hypothes.is/account/developer">Hypothesis developer settings</a>.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="sidebar-not-appearing">Sidebar Not Appearing</h3>
+<ol>
+<li>Check browser console for JavaScript errors (F12 → Console)</li>
+<li>Verify <code>hypothesis.js</code> is loading (Network tab)</li>
+<li>Ensure the path in <code>mkdocs.yml</code> matches the actual file location</li>
+<li>Try a hard refresh: <code>Ctrl+Shift+R</code> (Windows/Linux) or <code>Cmd+Shift+R</code> (Mac)</li>
+</ol>
+<h3 id="annotations-not-saving">Annotations Not Saving</h3>
+<ol>
+<li>Verify you're logged into Hypothesis</li>
+<li>Check if you're in a private group you don't have access to</li>
+<li>Ensure the page URL is publicly accessible (won't work on localhost for saving)</li>
+</ol>
+<h3 id="highlights-not-showing">Highlights Not Showing</h3>
+<ol>
+<li>Check <code>showHighlights</code> configuration</li>
+<li>Click the sidebar to ensure it's connected</li>
+<li>Verify annotations exist for the current page</li>
+</ol>
+<h3 id="conflicts-with-other-scripts">Conflicts with Other Scripts</h3>
+<p>If Hypothesis conflicts with other JavaScript:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="nx">$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Delay loading to avoid conflicts</span>
+<span class="w">    </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisConfig</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">script</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://hypothes.is/embed.js&#39;</span><span class="p">;</span>
+<span class="w">            </span><span class="nx">script</span><span class="p">.</span><span class="k">async</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">            </span><span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+<span class="w">            </span><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="p">{};</span>
+<span class="w">            </span><span class="p">};</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span><span class="w">  </span><span class="c1">// Wait 1 second</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="privacy-considerations">Privacy Considerations</h2>
+<p>When using Hypothesis, be aware:</p>
+<table>
+<thead>
+<tr>
+<th>Consideration</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Public by default</strong></td>
+<td>Annotations are public unless you use private groups</td>
+</tr>
+<tr>
+<td><strong>User accounts</strong></td>
+<td>Users must create Hypothesis accounts to annotate</td>
+</tr>
+<tr>
+<td><strong>Data storage</strong></td>
+<td>Annotations are stored on Hypothesis servers, not yours</td>
+</tr>
+<tr>
+<td><strong>GDPR</strong></td>
+<td>Hypothesis is GDPR compliant; see their <a href="https://web.hypothes.is/privacy/">privacy policy</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="for-educational-use">For Educational Use</h3>
+<p>If using with students:</p>
+<ol>
+<li>Create a private group for your class</li>
+<li>Inform students about the annotation feature</li>
+<li>Provide guidelines for appropriate use</li>
+<li>Consider age restrictions (Hypothesis requires users to be 13+)</li>
+</ol>
+<h2 id="complete-example">Complete Example</h2>
+<p>Here's a complete <code>hypothesis.js</code> file with common options:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Hypothesis Annotation Integration for MkDocs Material</span>
+<span class="c1">// File: docs/javascripts/hypothesis.js</span>
+
+<span class="nb">document</span><span class="nx">$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Prevent duplicate loading</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisLoaded</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">// Create and append the Hypothesis script</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">script</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://hypothes.is/embed.js&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">script</span><span class="p">.</span><span class="k">async</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Configure Hypothesis</span>
+<span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// Keep sidebar closed by default</span>
+<span class="w">                </span><span class="nx">openSidebar</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+
+<span class="w">                </span><span class="c1">// Show existing highlights on the page</span>
+<span class="w">                </span><span class="nx">showHighlights</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+
+<span class="w">                </span><span class="c1">// Uncomment to restrict to a private group:</span>
+<span class="w">                </span><span class="c1">// group: &#39;YOUR_GROUP_ID&#39;,</span>
+
+<span class="w">                </span><span class="c1">// Uncomment to customize branding:</span>
+<span class="w">                </span><span class="c1">// branding: {</span>
+<span class="w">                </span><span class="c1">//     appBackgroundColor: &#39;#fafafa&#39;,</span>
+<span class="w">                </span><span class="c1">//     ctaBackgroundColor: &#39;#1976d2&#39;,</span>
+<span class="w">                </span><span class="c1">//     ctaTextColor: &#39;#ffffff&#39;</span>
+<span class="w">                </span><span class="c1">// }</span>
+<span class="w">            </span><span class="p">};</span>
+<span class="w">        </span><span class="p">};</span>
+
+<span class="w">        </span><span class="c1">// Mark as loaded</span>
+<span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">hypothesisLoaded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://web.hypothes.is/">Hypothesis Website</a></li>
+<li><a href="https://web.hypothes.is/help/">Hypothesis Documentation</a></li>
+<li><a href="https://web.hypothes.is/for-publishers/">Publisher Integration Guide</a></li>
+<li><a href="https://h.readthedocs.io/en/latest/api/">Hypothesis API Documentation</a></li>
+<li><a href="https://web.hypothes.is/help/annotating-with-groups/">Hypothesis Groups</a></li>
+<li><a href="https://web.hypothes.is/privacy/">Privacy Policy</a></li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<p>After setting up Hypothesis:</p>
+<ol>
+<li>Test the annotation workflow yourself</li>
+<li>Create a private group if needed</li>
+<li>Share the annotation feature with your users</li>
+<li>Monitor annotations via the Hypothesis dashboard</li>
+<li>Consider combining with <a href="../tutorial/getting-started/">Giscus comments</a> for comprehensive feedback</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Feel free to share what you found helpful in the comments below or or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+Hypothesis%20Annotations+-+/hypothesis-annotations/"  target="_blank" rel="noopener">open an issue</a>.
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Please share details in the comments below or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+Hypothesis%20Annotations+-+/hypothesis-annotations/"  target="_blank" rel="noopener">open an issue</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../feedback-options/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Feedback Options">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Feedback Options
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../tutorial/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../js/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1853 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Template site for integrating Giscus comment and feedback with intelligent textbooks.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/giscus-template/tutorial/customizing-comment-pages/">
+      
+      
+        <link rel="prev" href="../getting-started/">
+      
+      
+        <link rel="next" href="../debugging/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Customizing Comment Pages - Template for Giscus Comments Integration</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-ZWKPKVQWVG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-ZWKPKVQWVG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-ZWKPKVQWVG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Customizing Comment Pages - Template for Giscus Comments Integration" >
+      
+        <meta  property="og:description"  content="Template site for integrating Giscus comment and feedback with intelligent textbooks." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/tutorial/customizing-comment-pages.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/giscus-template/tutorial/customizing-comment-pages/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Customizing Comment Pages - Template for Giscus Comments Integration" >
+      
+        <meta  name="twitter:description"  content="Template site for integrating Giscus comment and feedback with intelligent textbooks." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/tutorial/customizing-comment-pages.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#customizing-which-pages-have-comments" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Template for Giscus Comments Integration" class="md-header__button md-logo" aria-label="Template for Giscus Comments Integration" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Template for Giscus Comments Integration
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Customizing Comment Pages
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/giscus-template" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Template for Giscus Comments Integration" class="md-nav__button md-logo" aria-label="Template for Giscus Comments Integration" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Template for Giscus Comments Integration
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/giscus-template" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sample-page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback-options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feedback Options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hypothesis-annotations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hypothesis Annotations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Tutorial
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Customizing Comment Pages
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customizing Comment Pages
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#three-methods-for-controlling-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Methods for Controlling Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-1-page-front-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Page Front Matter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 1: Page Front Matter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-comments-on-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling Comments on a Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disabling-comments-on-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disabling Comments on a Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-front-matter-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Front Matter Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-2-folder-level-with-metayml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Folder-Level with .meta.yml
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 2: Folder-Level with .meta.yml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-metayml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a .meta.yml File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-enable-comments-for-all-chapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Enable Comments for All Chapters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-disable-comments-site-wide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Disable Comments Site-Wide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-3-combining-both-override-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 3: Combining Both (Override Pattern)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 3: Combining Both (Override Pattern)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-enable-folder-wide-disable-specific-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Enable Folder-Wide, Disable Specific Pages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-disable-folder-wide-enable-specific-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Disable Folder-Wide, Enable Specific Pages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metayml-inheritance-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      .meta.yml Inheritance Rules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=".meta.yml Inheritance Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-nested-folder-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Nested Folder Inheritance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-comments-only-on-content-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern: Comments Only on Content Pages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-comments-everywhere-except-specific-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern: Comments Everywhere Except Specific Pages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-gradual-rollout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern: Gradual Rollout
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comments-not-appearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments Not Appearing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metayml-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      .meta.yml Not Working
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      Override Not Working
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Documentation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Debugging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#three-methods-for-controlling-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Methods for Controlling Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-1-page-front-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Page Front Matter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 1: Page Front Matter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-comments-on-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling Comments on a Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disabling-comments-on-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disabling Comments on a Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-front-matter-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Front Matter Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-2-folder-level-with-metayml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Folder-Level with .meta.yml
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 2: Folder-Level with .meta.yml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-metayml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a .meta.yml File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-enable-comments-for-all-chapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Enable Comments for All Chapters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-disable-comments-site-wide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Disable Comments Site-Wide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-3-combining-both-override-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 3: Combining Both (Override Pattern)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 3: Combining Both (Override Pattern)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-enable-folder-wide-disable-specific-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Enable Folder-Wide, Disable Specific Pages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-disable-folder-wide-enable-specific-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Disable Folder-Wide, Enable Specific Pages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metayml-inheritance-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      .meta.yml Inheritance Rules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=".meta.yml Inheritance Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-nested-folder-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Nested Folder Inheritance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-comments-only-on-content-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern: Comments Only on Content Pages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-comments-everywhere-except-specific-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern: Comments Everywhere Except Specific Pages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-gradual-rollout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern: Gradual Rollout
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comments-not-appearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments Not Appearing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metayml-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      .meta.yml Not Working
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      Override Not Working
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Documentation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/giscus-template/blob/master/docs/tutorial/customizing-comment-pages.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="customizing-which-pages-have-comments">Customizing Which Pages Have Comments</h1>
+<p>This guide covers the different ways to control whether comments appear on your pages. You can enable or disable comments at the page level, folder level, or combine both approaches.</p>
+<h2 id="three-methods-for-controlling-comments">Three Methods for Controlling Comments</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Page Front Matter</strong></td>
+<td>Individual pages, quick overrides</td>
+</tr>
+<tr>
+<td><strong>Folder .meta.yml</strong></td>
+<td>Entire sections, chapters, or folders</td>
+</tr>
+<tr>
+<td><strong>Combined Approach</strong></td>
+<td>Folder-wide defaults with exceptions</td>
+</tr>
+</tbody>
+</table>
+<h2 id="method-1-page-front-matter">Method 1: Page Front Matter</h2>
+<p>Add <code>comments: true</code> or <code>comments: false</code> to the YAML front matter at the top of any markdown file.</p>
+<h3 id="enabling-comments-on-a-page">Enabling Comments on a Page</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>---
+<span class="gu">comments: true</span>
+<span class="gu">---</span>
+
+<span class="gh"># Page with Comments</span>
+
+Content here...
+</code></pre></div></td></tr></table></div>
+<h3 id="disabling-comments-on-a-page">Disabling Comments on a Page</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>---
+<span class="gu">comments: false</span>
+<span class="gu">---</span>
+
+<span class="gh"># Page without Comments</span>
+
+Content here...
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Front Matter Must Come First</p>
+<p>The <code>---</code> block must be the very first thing in your file. No blank lines or spaces before it.</p>
+</div>
+<h3 id="multiple-front-matter-options">Multiple Front Matter Options</h3>
+<p>You can combine <code>comments</code> with other front matter options:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>---
+title: My Custom Title
+comments: true
+hide:
+<span class="gu">  - navigation</span>
+<span class="gu">---</span>
+
+<span class="gh"># Page Content</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="method-2-folder-level-with-metayml">Method 2: Folder-Level with .meta.yml</h2>
+<p>Instead of adding front matter to every page, you can enable (or disable) comments for all pages in a folder using a <code>.meta.yml</code> file.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Make sure the <code>meta</code> plugin is in your <code>mkdocs.yml</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="creating-a-metayml-file">Creating a .meta.yml File</h3>
+<p>Create a file called <code>.meta.yml</code> in the folder where you want to control comments:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># .meta.yml</span>
+<span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div></td></tr></table></div>
+<p>All pages in that folder (and subfolders) will inherit this setting.</p>
+<h3 id="example-enable-comments-for-all-chapters">Example: Enable Comments for All Chapters</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>docs/
+├── chapters/
+│   ├── .meta.yml          # comments: true
+│   ├── chapter-1.md       # Has comments (inherited)
+│   ├── chapter-2.md       # Has comments (inherited)
+│   └── chapter-3.md       # Has comments (inherited)
+├── index.md               # No comments (no .meta.yml here)
+└── about.md               # No comments
+</code></pre></div></td></tr></table></div>
+<h3 id="example-disable-comments-site-wide">Example: Disable Comments Site-Wide</h3>
+<p>Place a <code>.meta.yml</code> in the <code>docs/</code> root to set a site-wide default:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>docs/
+├── .meta.yml              # comments: false (site-wide default)
+├── index.md               # No comments
+├── about.md               # No comments
+└── contact.md             # No comments
+</code></pre></div></td></tr></table></div>
+<h2 id="method-3-combining-both-override-pattern">Method 3: Combining Both (Override Pattern)</h2>
+<p>Page front matter <strong>always overrides</strong> folder-level <code>.meta.yml</code> settings. This powerful pattern lets you:</p>
+<ul>
+<li>Enable comments for a folder, then disable on specific pages</li>
+<li>Disable comments for a folder, then enable on specific pages</li>
+</ul>
+<h3 id="example-enable-folder-wide-disable-specific-pages">Example: Enable Folder-Wide, Disable Specific Pages</h3>
+<p>Use case: You want comments on all chapter pages except the solutions page.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>docs/
+├── chapters/
+│   ├── .meta.yml          # comments: true (folder default)
+│   ├── chapter-1.md       # Has comments (inherited)
+│   ├── chapter-2.md       # Has comments (inherited)
+│   ├── chapter-3.md       # Has comments (inherited)
+│   └── solutions.md       # No comments (front matter override)
+└── index.md               # No comments (not in the folder)
+</code></pre></div></td></tr></table></div>
+<p><strong>chapters/.meta.yml:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>chapters/solutions.md:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>---
+<span class="gu">comments: false</span>
+<span class="gu">---</span>
+
+<span class="gh"># Solutions</span>
+
+This page has no comments to avoid spoilers...
+</code></pre></div></td></tr></table></div></p>
+<h3 id="example-disable-folder-wide-enable-specific-pages">Example: Disable Folder-Wide, Enable Specific Pages</h3>
+<p>Use case: Most reference pages don't need comments, but a few important ones do.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>docs/
+├── reference/
+│   ├── .meta.yml          # comments: false (folder default)
+│   ├── api-overview.md    # Has comments (front matter override)
+│   ├── function-list.md   # No comments (inherited)
+│   └── constants.md       # No comments (inherited)
+</code></pre></div></td></tr></table></div>
+<p><strong>reference/.meta.yml:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>reference/api-overview.md:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>---
+<span class="gu">comments: true</span>
+<span class="gu">---</span>
+
+<span class="gh"># API Overview</span>
+
+This important page has comments enabled...
+</code></pre></div></td></tr></table></div></p>
+<h2 id="metayml-inheritance-rules">.meta.yml Inheritance Rules</h2>
+<p>The <code>.meta.yml</code> file follows these inheritance rules:</p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inheritance</strong></td>
+<td>Settings apply to all pages in the folder and subfolders</td>
+</tr>
+<tr>
+<td><strong>Override</strong></td>
+<td>Page front matter always overrides <code>.meta.yml</code></td>
+</tr>
+<tr>
+<td><strong>Nested folders</strong></td>
+<td>A <code>.meta.yml</code> in a subfolder overrides the parent folder's settings</td>
+</tr>
+<tr>
+<td><strong>No .meta.yml</strong></td>
+<td>Pages default to no comments unless front matter specifies</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-nested-folder-inheritance">Example: Nested Folder Inheritance</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>docs/
+├── .meta.yml              # comments: false (site-wide default)
+├── index.md               # No comments (inherited from docs/)
+├── about.md               # No comments (inherited from docs/)
+└── chapters/
+    ├── .meta.yml          # comments: true (overrides parent)
+    ├── intro.md           # Has comments (inherited from chapters/)
+    └── advanced/
+        ├── .meta.yml      # comments: false (overrides chapters/)
+        └── secrets.md     # No comments (inherited from advanced/)
+</code></pre></div></td></tr></table></div>
+<p>In this example:</p>
+<ol>
+<li><strong>docs/.meta.yml</strong> sets <code>comments: false</code> as the site default</li>
+<li><strong>chapters/.meta.yml</strong> overrides this to <code>comments: true</code> for all chapter content</li>
+<li><strong>chapters/advanced/.meta.yml</strong> overrides again to <code>comments: false</code> for sensitive content</li>
+</ol>
+<h2 id="quick-reference">Quick Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable comments on one page</td>
+<td>Add <code>comments: true</code> to front matter</td>
+</tr>
+<tr>
+<td>Disable comments on one page</td>
+<td>Add <code>comments: false</code> to front matter</td>
+</tr>
+<tr>
+<td>Enable comments for a folder</td>
+<td>Create <code>.meta.yml</code> with <code>comments: true</code></td>
+</tr>
+<tr>
+<td>Disable comments for a folder</td>
+<td>Create <code>.meta.yml</code> with <code>comments: false</code></td>
+</tr>
+<tr>
+<td>Enable folder-wide, disable one page</td>
+<td><code>.meta.yml</code> with <code>true</code>, page front matter with <code>false</code></td>
+</tr>
+<tr>
+<td>Disable folder-wide, enable one page</td>
+<td><code>.meta.yml</code> with <code>false</code>, page front matter with <code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="pattern-comments-only-on-content-pages">Pattern: Comments Only on Content Pages</h3>
+<p>Enable comments only on chapters, not on index or utility pages:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>docs/
+├── index.md               # No comments
+├── about.md               # No comments
+├── glossary.md            # No comments
+├── chapters/
+│   ├── .meta.yml          # comments: true
+│   └── *.md               # All have comments
+└── appendix/
+    ├── .meta.yml          # comments: true
+    └── *.md               # All have comments
+</code></pre></div></td></tr></table></div>
+<h3 id="pattern-comments-everywhere-except-specific-pages">Pattern: Comments Everywhere Except Specific Pages</h3>
+<p>Enable comments site-wide, disable on specific pages:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>docs/
+├── .meta.yml              # comments: true (site-wide)
+├── index.md               # Has comments
+├── chapters/
+│   └── *.md               # All have comments
+├── license.md             # No comments (front matter: comments: false)
+└── privacy.md             # No comments (front matter: comments: false)
+</code></pre></div></td></tr></table></div>
+<h3 id="pattern-gradual-rollout">Pattern: Gradual Rollout</h3>
+<p>Start with comments on a few pages, expand later:</p>
+<p><strong>Phase 1:</strong> Enable on specific pages only (use front matter)
+<strong>Phase 2:</strong> Enable for entire sections (add .meta.yml files)
+<strong>Phase 3:</strong> Enable site-wide (add docs/.meta.yml)</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="comments-not-appearing">Comments Not Appearing</h3>
+<ol>
+<li>Check that <code>comments: true</code> is set (either in front matter or .meta.yml)</li>
+<li>Verify the <code>meta</code> plugin is in your <code>mkdocs.yml</code> (required for .meta.yml)</li>
+<li>Ensure front matter is at the very top of the file</li>
+<li>Check for typos: <code>comments</code> not <code>comment</code></li>
+</ol>
+<h3 id="metayml-not-working">.meta.yml Not Working</h3>
+<ol>
+<li>Verify filename is exactly <code>.meta.yml</code> (with the leading dot)</li>
+<li>Check that the <code>meta</code> plugin is listed in <code>mkdocs.yml</code>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Restart <code>mkdocs serve</code> after adding .meta.yml files</li>
+</ol>
+<h3 id="override-not-working">Override Not Working</h3>
+<ol>
+<li>Front matter must be valid YAML (check for syntax errors)</li>
+<li>The <code>---</code> delimiters must be on their own lines</li>
+<li>No spaces before the opening <code>---</code></li>
+</ol>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="../getting-started/">Getting Started</a> - Initial setup guide</li>
+<li><a href="../debugging/">Debugging</a> - Troubleshooting common issues</li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/plugins/meta/">MkDocs Material Meta Plugin</a> - Official documentation</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Feel free to share what you found helpful in the comments below or or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+Customizing%20Comment%20Pages+-+/tutorial/customizing-comment-pages/"  target="_blank" rel="noopener">open an issue</a>.
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Please share details in the comments below or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+Customizing%20Comment%20Pages+-+/tutorial/customizing-comment-pages/"  target="_blank" rel="noopener">open an issue</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <!-- Giscus Comment Container - Hidden by default, shown when feedback is clicked -->
+  <div id="giscus-container" style="display: none;">
+    <h2 id="__comments">Comments</h2>
+
+    <!-- Giscus Comment System -->
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="dmccreary/giscus-template"
+      data-repo-id="R_kgDOQ6DmxQ"
+      data-category="Comments"
+      data-category-id="DIC_kwDOQ6Dmxc4C0-IF"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="1"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async
+    >
+    </script>
+  </div>
+
+  <!-- Synchronize Giscus theme with mkdocs-material palette (light/dark mode) -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // Function to show Giscus comments
+    function showGiscusComments() {
+      var container = document.getElementById("giscus-container")
+      if (container) {
+        container.style.display = "block"
+        setTimeout(function() {
+          container.scrollIntoView({ behavior: "smooth", block: "start" })
+        }, 300)
+      }
+    }
+
+    // Use event capturing (third param = true) to catch events before disabled fieldset blocks them
+    document.addEventListener("click", function(e) {
+      var target = e.target.closest(".md-feedback__icon")
+      if (target) {
+        showGiscusComments()
+      }
+    }, true)
+
+    // Also listen for the feedback form submission via Material's custom event
+    document.addEventListener("DOMContentLoaded", function() {
+      // Watch for changes to the feedback note visibility (Material shows note after click)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === "attributes" && mutation.attributeName === "hidden") {
+            var target = mutation.target
+            if (target.classList && target.classList.contains("md-feedback__note") === false &&
+                target.hasAttribute("data-md-value") && !target.hidden) {
+              showGiscusComments()
+            }
+          }
+        })
+      })
+
+      var feedbackNote = document.querySelector(".md-feedback__note")
+      if (feedbackNote) {
+        observer.observe(feedbackNote, {
+          attributes: true,
+          subtree: true,
+          attributeFilter: ["hidden"]
+        })
+      }
+
+      // Handle palette changes for Giscus theme sync
+      var paletteRef = document.querySelector("[data-md-component=palette]")
+      if (paletteRef) {
+        paletteRef.addEventListener("change", function() {
+          var palette = __md_get("__palette")
+          if (palette && typeof palette.color === "object") {
+            var theme = palette.color.scheme === "slate"
+              ? "transparent_dark"
+              : "light"
+
+            // Instruct Giscus to change theme
+            var frame = document.querySelector(".giscus-frame")
+            if (frame) {
+              frame.contentWindow.postMessage(
+                { giscus: { setConfig: { theme } } },
+                "https://giscus.app"
+              )
+            }
+          }
+        })
+      }
+    })
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../getting-started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Getting Started
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../debugging/" class="md-footer__link md-footer__link--next" aria-label="Next: Debugging">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Debugging
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

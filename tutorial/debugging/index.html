@@ -1,0 +1,1616 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Template site for integrating Giscus comment and feedback with intelligent textbooks.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/giscus-template/tutorial/debugging/">
+      
+      
+        <link rel="prev" href="../customizing-comment-pages/">
+      
+      
+        <link rel="next" href="../../license/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Debugging - Template for Giscus Comments Integration</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-ZWKPKVQWVG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-ZWKPKVQWVG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-ZWKPKVQWVG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Debugging - Template for Giscus Comments Integration" >
+      
+        <meta  property="og:description"  content="Template site for integrating Giscus comment and feedback with intelligent textbooks." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/tutorial/debugging.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/giscus-template/tutorial/debugging/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Debugging - Template for Giscus Comments Integration" >
+      
+        <meta  name="twitter:description"  content="Template site for integrating Giscus comment and feedback with intelligent textbooks." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/tutorial/debugging.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#debugging-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Template for Giscus Comments Integration" class="md-header__button md-logo" aria-label="Template for Giscus Comments Integration" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Template for Giscus Comments Integration
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Debugging
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/giscus-template" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Template for Giscus Comments Integration" class="md-nav__button md-logo" aria-label="Template for Giscus Comments Integration" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Template for Giscus Comments Integration
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/giscus-template" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sample-page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback-options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feedback Options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hypothesis-annotations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hypothesis Annotations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Tutorial
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customizing-comment-pages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customizing Comment Pages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Debugging
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Debugging
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-diagnostic-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Diagnostic Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#giscus-is-not-installed-on-this-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Giscus is not installed on this repository"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments-section-doesnt-appear" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments Section Doesn't Appear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedback-icons-dont-trigger-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedback Icons Don't Trigger Comments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theme-not-syncing-lightdark-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theme Not Syncing (Light/Dark Mode)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discussion-not-found-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Discussion not found" Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments-work-locally-but-not-when-deployed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments Work Locally but Not When Deployed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-browser-developer-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Browser Developer Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Browser Developer Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#console-commands-for-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Console Commands for Debugging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-tab-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Tab Debugging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements-tab-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elements Tab Debugging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-your-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifying Your Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verifying Your Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-github-discussions-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test GitHub Discussions Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-giscus-app-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Giscus App Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-configuration-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get All Configuration Values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#still-having-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Still Having Issues?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-diagnostic-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Diagnostic Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#giscus-is-not-installed-on-this-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Giscus is not installed on this repository"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments-section-doesnt-appear" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments Section Doesn't Appear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedback-icons-dont-trigger-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedback Icons Don't Trigger Comments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theme-not-syncing-lightdark-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theme Not Syncing (Light/Dark Mode)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discussion-not-found-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Discussion not found" Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments-work-locally-but-not-when-deployed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments Work Locally but Not When Deployed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-browser-developer-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Browser Developer Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Browser Developer Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#console-commands-for-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Console Commands for Debugging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-tab-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Tab Debugging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements-tab-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elements Tab Debugging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-your-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifying Your Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verifying Your Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-github-discussions-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test GitHub Discussions Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-giscus-app-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Giscus App Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-configuration-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get All Configuration Values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#still-having-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Still Having Issues?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/giscus-template/blob/master/docs/tutorial/debugging.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="debugging-guide">Debugging Guide</h1>
+<p>This guide helps you troubleshoot common issues when integrating Giscus comments with MkDocs Material.</p>
+<h2 id="quick-diagnostic-checklist">Quick Diagnostic Checklist</h2>
+<p>Before diving into specific issues, run through this checklist:</p>
+<ul>
+<li>[ ] Is <code>custom_dir: docs/overrides</code> in your <code>mkdocs.yml</code>?</li>
+<li>[ ] Does <code>docs/overrides/partials/comments.html</code> exist?</li>
+<li>[ ] Does your page have <code>comments: true</code> in the front matter?</li>
+<li>[ ] Is the Giscus app installed on your repository?</li>
+<li>[ ] Are GitHub Discussions enabled on your repository?</li>
+<li>[ ] Does your Comments category exist in Discussions?</li>
+</ul>
+<h2 id="common-issues">Common Issues</h2>
+<h3 id="giscus-is-not-installed-on-this-repository">"Giscus is not installed on this repository"</h3>
+<p><strong>Symptoms:</strong> Error message appears where comments should be.</p>
+<p><strong>Causes and Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Giscus app not installed</strong></p>
+<ul>
+<li>Visit <a href="https://github.com/apps/giscus">github.com/apps/giscus</a></li>
+<li>Click <strong>Install</strong> and select your repository</li>
+</ul>
+</li>
+<li>
+<p><strong>Wrong repository in comments.html</strong></p>
+<ul>
+<li>Check that <code>data-repo</code> matches your actual repository</li>
+<li>Format should be <code>username/repo-name</code> (e.g., <code>dmccreary/giscus-template</code>)</li>
+</ul>
+</li>
+<li>
+<p><strong>Repository ID mismatch</strong></p>
+<ul>
+<li>Get the correct ID from <a href="https://giscus.app/">giscus.app</a> or via CLI:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>gh<span class="w"> </span>api<span class="w"> </span>graphql<span class="w"> </span>-f<span class="w"> </span><span class="nv">query</span><span class="o">=</span><span class="s1">&#39;{repository(owner:&quot;USERNAME&quot;,name:&quot;REPO&quot;){id}}&#39;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="comments-section-doesnt-appear">Comments Section Doesn't Appear</h3>
+<p><strong>Symptoms:</strong> No comment section visible on the page.</p>
+<p><strong>Debugging Steps:</strong></p>
+<ol>
+<li>
+<p><strong>Check the browser console</strong> (F12 → Console tab)</p>
+<p>Look for JavaScript errors. Common ones:
+- <code>__md_get is not defined</code> - Material theme not loading properly
+- <code>Cannot read property of null</code> - Element selectors failing</p>
+</li>
+<li>
+<p><strong>Verify the template path</strong></p>
+<p>The file must be at exactly:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docs/overrides/partials/comments.html
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Check front matter</strong></p>
+<p>Open your markdown file and verify:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nn">---</span>
+</code></pre></div></td></tr></table></div></p>
+<p>The <code>---</code> must be the very first line with no spaces before it.</p>
+</li>
+<li>
+<p><strong>Inspect the HTML</strong></p>
+<p>Right-click on the page → Inspect. Search for:
+- <code>giscus-container</code> - Should exist if template loaded
+- <code>giscus-frame</code> - Should exist if Giscus loaded</p>
+</li>
+</ol>
+<h3 id="feedback-icons-dont-trigger-comments">Feedback Icons Don't Trigger Comments</h3>
+<p><strong>Symptoms:</strong> Clicking happy/sad face doesn't show the comment form.</p>
+<p><strong>Debugging Steps:</strong></p>
+<ol>
+<li>
+<p><strong>Check if feedback widget exists</strong></p>
+<p>Open browser console and run:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.md-feedback&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p>If this returns <code>null</code>, the feedback widget isn't configured in <code>mkdocs.yml</code>.</p>
+</li>
+<li>
+<p><strong>Check feedback button structure</strong></p>
+<p>Run in console:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.md-feedback__icon&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Should return a NodeList with 2 elements (happy and sad icons).</p>
+</li>
+<li>
+<p><strong>Verify the fieldset isn't permanently disabled</strong></p>
+<p>Inspect the feedback widget HTML. Look for:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">fieldset</span> <span class="na">disabled</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div></p>
+<p>This is normal - Material for MkDocs enables it when ready.</p>
+</li>
+<li>
+<p><strong>Test the click handler manually</strong></p>
+<p>Run in console:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;giscus-container&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;block&quot;</span>
+</code></pre></div></td></tr></table></div></p>
+<p>If the comments appear, the issue is with the click event listener.</p>
+</li>
+<li>
+<p><strong>Check for event capturing</strong></p>
+<p>The click listener must use event capturing (third parameter <code>true</code>):
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">handler</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p>This is necessary because the feedback fieldset is disabled.</p>
+</li>
+</ol>
+<h3 id="theme-not-syncing-lightdark-mode">Theme Not Syncing (Light/Dark Mode)</h3>
+<p><strong>Symptoms:</strong> Comments stay light when you switch to dark mode (or vice versa).</p>
+<p><strong>Causes and Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Missing palette configuration</strong></p>
+<p>Both schemes must be defined in <code>mkdocs.yml</code>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">palette</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span><span class="w">    </span><span class="c1"># Light mode</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/brightness-7</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slate</span><span class="w">      </span><span class="c1"># Dark mode</span>
+<span class="w">    </span><span class="nt">toggle</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/brightness-4</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Palette selector not found</strong></p>
+<p>The JavaScript looks for <code>[data-md-component=palette]</code>. If your theme customization removed this, the sync won't work.</p>
+</li>
+<li>
+<p><strong>Giscus iframe not loaded</strong></p>
+<p>The theme sync only works after Giscus loads. Check console for:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.giscus-frame&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<h3 id="discussion-not-found-error">"Discussion not found" Error</h3>
+<p><strong>Symptoms:</strong> Giscus loads but shows "Discussion not found".</p>
+<p><strong>Causes and Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Category doesn't exist</strong></p>
+<ul>
+<li>Go to your repository's Discussions tab</li>
+<li>Verify the "Comments" category exists</li>
+<li>Category name must match <code>data-category</code> exactly</li>
+</ul>
+</li>
+<li>
+<p><strong>Category ID mismatch</strong></p>
+<p>Get the correct category ID:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>gh<span class="w"> </span>api<span class="w"> </span>graphql<span class="w"> </span>-f<span class="w"> </span><span class="nv">query</span><span class="o">=</span><span class="s1">&#39;</span>
+<span class="s1">{</span>
+<span class="s1">  repository(owner: &quot;USERNAME&quot;, name: &quot;REPO&quot;) {</span>
+<span class="s1">    discussionCategories(first: 10) {</span>
+<span class="s1">      nodes {</span>
+<span class="s1">        id</span>
+<span class="s1">        name</span>
+<span class="s1">      }</span>
+<span class="s1">    }</span>
+<span class="s1">  }</span>
+<span class="s1">}&#39;</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Strict mode enabled</strong></p>
+<p>If <code>data-strict="1"</code>, Giscus requires an exact URL match. Try setting:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>data-strict=&quot;0&quot;
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<h3 id="comments-work-locally-but-not-when-deployed">Comments Work Locally but Not When Deployed</h3>
+<p><strong>Symptoms:</strong> Everything works on <code>localhost:8000</code> but fails on GitHub Pages.</p>
+<p><strong>Causes and Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>URL mismatch</strong></p>
+<p>Giscus validates the page URL. Make sure your <code>site_url</code> in <code>mkdocs.yml</code> matches your deployed URL:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">site_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://username.github.io/repo-name/</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Cache issues</strong></p>
+<p>Hard refresh the page: <code>Ctrl+Shift+R</code> (Windows/Linux) or <code>Cmd+Shift+R</code> (Mac)</p>
+</li>
+<li>
+<p><strong>GitHub Pages not updated</strong></p>
+<p>Changes can take a few minutes to propagate. Check the Actions tab for deployment status.</p>
+</li>
+</ol>
+<h2 id="using-browser-developer-tools">Using Browser Developer Tools</h2>
+<h3 id="console-commands-for-debugging">Console Commands for Debugging</h3>
+<p><strong>Check if Giscus container exists:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;giscus-container&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Check if Giscus iframe loaded:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.giscus-frame&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Check feedback widget:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.md-feedback&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>List all feedback icons:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.md-feedback__icon&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Manually show comments:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;giscus-container&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;block&quot;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Check current palette:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">__md_get</span><span class="p">(</span><span class="s2">&quot;__palette&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="network-tab-debugging">Network Tab Debugging</h3>
+<ol>
+<li>Open Developer Tools (F12)</li>
+<li>Go to the <strong>Network</strong> tab</li>
+<li>Reload the page</li>
+<li>Filter by "giscus"</li>
+<li>Check if <code>client.js</code> loads successfully (status 200)</li>
+</ol>
+<h3 id="elements-tab-debugging">Elements Tab Debugging</h3>
+<ol>
+<li>Open Developer Tools (F12)</li>
+<li>Go to the <strong>Elements</strong> tab</li>
+<li>Search for <code>giscus</code> (Ctrl+F)</li>
+<li>Verify the script tag has correct attributes</li>
+<li>Check if <code>giscus-frame</code> iframe exists</li>
+</ol>
+<h2 id="verifying-your-configuration">Verifying Your Configuration</h2>
+<h3 id="test-github-discussions-access">Test GitHub Discussions Access</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check if discussions are enabled</span>
+gh<span class="w"> </span>api<span class="w"> </span>repos/USERNAME/REPO<span class="w"> </span>--jq<span class="w"> </span><span class="s1">&#39;.has_discussions&#39;</span>
+
+<span class="c1"># Should return: true</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="test-giscus-app-installation">Test Giscus App Installation</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List installed apps (look for giscus)</span>
+gh<span class="w"> </span>api<span class="w"> </span>repos/USERNAME/REPO/installation<span class="w"> </span>--jq<span class="w"> </span><span class="s1">&#39;.id&#39;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="get-all-configuration-values">Get All Configuration Values</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>gh<span class="w"> </span>api<span class="w"> </span>graphql<span class="w"> </span>-f<span class="w"> </span><span class="nv">query</span><span class="o">=</span><span class="s1">&#39;</span>
+<span class="s1">{</span>
+<span class="s1">  repository(owner: &quot;USERNAME&quot;, name: &quot;REPO&quot;) {</span>
+<span class="s1">    id</span>
+<span class="s1">    name</span>
+<span class="s1">    hasDiscussionsEnabled</span>
+<span class="s1">    discussionCategories(first: 10) {</span>
+<span class="s1">      nodes {</span>
+<span class="s1">        id</span>
+<span class="s1">        name</span>
+<span class="s1">        slug</span>
+<span class="s1">      }</span>
+<span class="s1">    }</span>
+<span class="s1">  }</span>
+<span class="s1">}&#39;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="still-having-issues">Still Having Issues?</h2>
+<p>If you've tried everything above and still have problems:</p>
+<ol>
+<li><strong>Check the Giscus documentation:</strong> <a href="https://giscus.app/">giscus.app</a></li>
+<li><strong>Search existing issues:</strong> <a href="https://github.com/giscus/giscus/issues">giscus/giscus/issues</a></li>
+<li><strong>Open an issue on this template:</strong> <a href="https://github.com/dmccreary/giscus-template/issues">dmccreary/giscus-template/issues</a></li>
+</ol>
+<p>When reporting an issue, include:</p>
+<ul>
+<li>Browser and version</li>
+<li>Error messages from the console</li>
+<li>Relevant configuration from <code>mkdocs.yml</code></li>
+<li>The <code>comments.html</code> file contents</li>
+<li>Screenshots if applicable</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Feel free to share what you found helpful in the comments below or or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+Debugging+-+/tutorial/debugging/"  target="_blank" rel="noopener">open an issue</a>.
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Please share details in the comments below or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+Debugging+-+/tutorial/debugging/"  target="_blank" rel="noopener">open an issue</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <!-- Giscus Comment Container - Hidden by default, shown when feedback is clicked -->
+  <div id="giscus-container" style="display: none;">
+    <h2 id="__comments">Comments</h2>
+
+    <!-- Giscus Comment System -->
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="dmccreary/giscus-template"
+      data-repo-id="R_kgDOQ6DmxQ"
+      data-category="Comments"
+      data-category-id="DIC_kwDOQ6Dmxc4C0-IF"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="1"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async
+    >
+    </script>
+  </div>
+
+  <!-- Synchronize Giscus theme with mkdocs-material palette (light/dark mode) -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // Function to show Giscus comments
+    function showGiscusComments() {
+      var container = document.getElementById("giscus-container")
+      if (container) {
+        container.style.display = "block"
+        setTimeout(function() {
+          container.scrollIntoView({ behavior: "smooth", block: "start" })
+        }, 300)
+      }
+    }
+
+    // Use event capturing (third param = true) to catch events before disabled fieldset blocks them
+    document.addEventListener("click", function(e) {
+      var target = e.target.closest(".md-feedback__icon")
+      if (target) {
+        showGiscusComments()
+      }
+    }, true)
+
+    // Also listen for the feedback form submission via Material's custom event
+    document.addEventListener("DOMContentLoaded", function() {
+      // Watch for changes to the feedback note visibility (Material shows note after click)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === "attributes" && mutation.attributeName === "hidden") {
+            var target = mutation.target
+            if (target.classList && target.classList.contains("md-feedback__note") === false &&
+                target.hasAttribute("data-md-value") && !target.hidden) {
+              showGiscusComments()
+            }
+          }
+        })
+      })
+
+      var feedbackNote = document.querySelector(".md-feedback__note")
+      if (feedbackNote) {
+        observer.observe(feedbackNote, {
+          attributes: true,
+          subtree: true,
+          attributeFilter: ["hidden"]
+        })
+      }
+
+      // Handle palette changes for Giscus theme sync
+      var paletteRef = document.querySelector("[data-md-component=palette]")
+      if (paletteRef) {
+        paletteRef.addEventListener("change", function() {
+          var palette = __md_get("__palette")
+          if (palette && typeof palette.color === "object") {
+            var theme = palette.color.scheme === "slate"
+              ? "transparent_dark"
+              : "light"
+
+            // Instruct Giscus to change theme
+            var frame = document.querySelector(".giscus-frame")
+            if (frame) {
+              frame.contentWindow.postMessage(
+                { giscus: { setConfig: { theme } } },
+                "https://giscus.app"
+              )
+            }
+          }
+        })
+      }
+    })
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../customizing-comment-pages/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Customizing Comment Pages">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Customizing Comment Pages
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../license/" class="md-footer__link md-footer__link--next" aria-label="Next: License">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                License
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

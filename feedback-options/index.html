@@ -1,0 +1,2217 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Template site for integrating Giscus comment and feedback with intelligent textbooks.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/giscus-template/feedback-options/">
+      
+      
+        <link rel="prev" href="../sample-page/">
+      
+      
+        <link rel="next" href="../hypothesis-annotations/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Feedback Options - Template for Giscus Comments Integration</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-ZWKPKVQWVG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-ZWKPKVQWVG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-ZWKPKVQWVG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Feedback Options - Template for Giscus Comments Integration" >
+      
+        <meta  property="og:description"  content="Template site for integrating Giscus comment and feedback with intelligent textbooks." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/feedback-options.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/giscus-template/feedback-options/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Feedback Options - Template for Giscus Comments Integration" >
+      
+        <meta  name="twitter:description"  content="Template site for integrating Giscus comment and feedback with intelligent textbooks." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/giscus-template/assets/images/social/feedback-options.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#feedback-options-for-mkdocs-sites" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Template for Giscus Comments Integration" class="md-header__button md-logo" aria-label="Template for Giscus Comments Integration" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Template for Giscus Comments Integration
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Feedback Options
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/giscus-template" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Template for Giscus Comments Integration" class="md-nav__button md-logo" aria-label="Template for Giscus Comments Integration" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Template for Giscus Comments Integration
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/giscus-template" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample-page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Feedback Options
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feedback Options
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#feedback-methods-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedback Methods Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-feedback-widget-built-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Feedback Widget (Built-in)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Feedback Widget (Built-in)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-configuration-2-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Configuration (2 Options)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended-configuration-4-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extended Configuration (4 Options)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Icons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-and-cons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros and Cons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-giscus-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Giscus Comments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Giscus Comments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-edit-this-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Edit This Page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Edit This Page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-and-cons_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros and Cons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best For
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-hypothesis-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Hypothesis Annotations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Hypothesis Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-and-cons_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros and Cons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-for_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best For
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-utterances" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Utterances
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Utterances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#giscus-vs-utterances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giscus vs Utterances
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-choose-utterances" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Choose Utterances
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-google-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Google Forms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Google Forms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding-in-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embedding in a Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-questions-for-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Questions for Textbooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-and-cons_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros and Cons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-github-issue-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. GitHub Issue Templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. GitHub Issue Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Templates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-from-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linking from Pages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-content-specific-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Content-Specific Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Content-Specific Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Combinations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommended Combinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-educational-content-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Educational Content (Textbooks)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-technical-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Technical Documentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-collaborative-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Collaborative Projects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-and-analyzing-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing and Analyzing Feedback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hypothesis-annotations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hypothesis Annotations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../tutorial/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Tutorial
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#feedback-methods-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedback Methods Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-feedback-widget-built-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Feedback Widget (Built-in)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Feedback Widget (Built-in)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-configuration-2-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Configuration (2 Options)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended-configuration-4-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extended Configuration (4 Options)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Icons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-and-cons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros and Cons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-giscus-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Giscus Comments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Giscus Comments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-edit-this-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Edit This Page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Edit This Page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-and-cons_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros and Cons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best For
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-hypothesis-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Hypothesis Annotations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Hypothesis Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-and-cons_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros and Cons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-for_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best For
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-utterances" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Utterances
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Utterances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#giscus-vs-utterances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giscus vs Utterances
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-choose-utterances" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Choose Utterances
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-google-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Google Forms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Google Forms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding-in-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embedding in a Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-questions-for-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Questions for Textbooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-and-cons_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros and Cons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-github-issue-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. GitHub Issue Templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. GitHub Issue Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Templates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-from-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linking from Pages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-content-specific-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Content-Specific Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Content-Specific Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Combinations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommended Combinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-educational-content-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Educational Content (Textbooks)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-technical-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Technical Documentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-collaborative-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Collaborative Projects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-and-analyzing-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing and Analyzing Feedback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/giscus-template/blob/master/docs/feedback-options.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="feedback-options-for-mkdocs-sites">Feedback Options for MkDocs Sites</h1>
+<p>This page describes various options for collecting user feedback on MkDocs Material sites. You can combine multiple approaches to capture both quick sentiment and detailed responses.</p>
+<h2 id="feedback-methods-overview">Feedback Methods Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>User Effort</th>
+<th>Data Type</th>
+<th>Storage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feedback Widget</td>
+<td>One click</td>
+<td>Quantitative</td>
+<td>Google Analytics</td>
+</tr>
+<tr>
+<td>Giscus Comments</td>
+<td>Write comment</td>
+<td>Qualitative</td>
+<td>GitHub Discussions</td>
+</tr>
+<tr>
+<td>Edit This Page</td>
+<td>Submit PR</td>
+<td>Direct fix</td>
+<td>GitHub</td>
+</tr>
+<tr>
+<td>Hypothesis</td>
+<td>Highlight + annotate</td>
+<td>Contextual</td>
+<td>Hypothesis</td>
+</tr>
+<tr>
+<td>Utterances</td>
+<td>Write comment</td>
+<td>Qualitative</td>
+<td>GitHub Issues</td>
+</tr>
+<tr>
+<td>Google Forms</td>
+<td>Fill form</td>
+<td>Structured</td>
+<td>Google Sheets</td>
+</tr>
+<tr>
+<td>Issue Templates</td>
+<td>Fill template</td>
+<td>Structured</td>
+<td>GitHub Issues</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-feedback-widget-built-in">1. Feedback Widget (Built-in)</h2>
+<p>MkDocs Material includes a feedback widget that sends ratings to Google Analytics. This is the simplest way to collect quick sentiment data.</p>
+<h3 id="basic-configuration-2-options">Basic Configuration (2 Options)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">extra</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">analytics</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">google</span>
+<span class="w">    </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">G-XXXXXXXXXX</span>
+<span class="w">    </span><span class="nt">feedback</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Was this page helpful?</span>
+<span class="w">      </span><span class="nt">ratings</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/emoticon-happy-outline</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This page was helpful</span>
+<span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">          </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Thanks for your feedback!</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/emoticon-sad-outline</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This page could be improved</span>
+<span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">          </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Thanks! Please share details below.</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="extended-configuration-4-options">Extended Configuration (4 Options)</h3>
+<p>You can add up to 4 rating options for more granular feedback:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">extra</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">analytics</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">google</span>
+<span class="w">    </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">G-XXXXXXXXXX</span>
+<span class="w">    </span><span class="nt">feedback</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">How would you rate this page?</span>
+<span class="w">      </span><span class="nt">ratings</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/emoticon-sad-outline</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Confusing</span>
+<span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">          </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">            </span><span class="no">Sorry to hear that. Please share what was confusing</span>
+<span class="w">            </span><span class="no">in the comments below.</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/emoticon-neutral-outline</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Could be better</span>
+<span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">          </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">            </span><span class="no">Thanks for the feedback. What could we improve?</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/emoticon-happy-outline</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Helpful</span>
+<span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">          </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">            </span><span class="no">Great to hear! Feel free to share what helped.</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/emoticon-excited-outline</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Excellent</span>
+<span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">          </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">            </span><span class="no">Wonderful! Consider sharing this page with others.</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="available-icons">Available Icons</h3>
+<p>You can use any <a href="https://pictogrammers.com/library/mdi/">Material Design Icon</a>. Common choices:</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:material-emoticon-happy-outline:</td>
+<td><code>material/emoticon-happy-outline</code></td>
+</tr>
+<tr>
+<td>:material-emoticon-sad-outline:</td>
+<td><code>material/emoticon-sad-outline</code></td>
+</tr>
+<tr>
+<td>:material-emoticon-neutral-outline:</td>
+<td><code>material/emoticon-neutral-outline</code></td>
+</tr>
+<tr>
+<td>:material-emoticon-excited-outline:</td>
+<td><code>material/emoticon-excited-outline</code></td>
+</tr>
+<tr>
+<td>:material-thumb-up-outline:</td>
+<td><code>material/thumb-up-outline</code></td>
+</tr>
+<tr>
+<td>:material-thumb-down-outline:</td>
+<td><code>material/thumb-down-outline</code></td>
+</tr>
+<tr>
+<td>:material-star-outline:</td>
+<td><code>material/star-outline</code></td>
+</tr>
+<tr>
+<td>:material-heart-outline:</td>
+<td><code>material/heart-outline</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pros-and-cons">Pros and Cons</h3>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zero friction for users</td>
+<td>Only quantitative data</td>
+</tr>
+<tr>
+<td>No login required</td>
+<td>Requires Google Analytics</td>
+</tr>
+<tr>
+<td>Aggregate statistics available</td>
+<td>No detailed feedback</td>
+</tr>
+<tr>
+<td>Built into MkDocs Material</td>
+<td>Can't respond to users</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-giscus-comments">2. Giscus Comments</h2>
+<p><a href="https://giscus.app/">Giscus</a> uses GitHub Discussions for comments. This is the primary method documented in this template.</p>
+<h3 id="key-features">Key Features</h3>
+<ul>
+<li>Comments stored in your GitHub repository</li>
+<li>GitHub authentication prevents spam</li>
+<li>Threaded conversations</li>
+<li>Emoji reactions</li>
+<li>Light/dark theme sync</li>
+<li>GraphQL API for analytics</li>
+</ul>
+<h3 id="when-to-use">When to Use</h3>
+<ul>
+<li>You want persistent, searchable feedback</li>
+<li>Your audience has GitHub accounts</li>
+<li>You need threaded discussions</li>
+<li>You want to respond to feedback</li>
+</ul>
+<p>See the <a href="../tutorial/getting-started/">Getting Started</a> guide for setup instructions.</p>
+<h2 id="3-edit-this-page">3. Edit This Page</h2>
+<p>MkDocs Material can display an "Edit this page" button that links directly to the source file on GitHub.</p>
+<h3 id="configuration">Configuration</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">repo_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/username/repo</span>
+<span class="nt">edit_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blob/main/docs/</span>
+
+<span class="nt">theme</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.action.edit</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="pros-and-cons_1">Pros and Cons</h3>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direct contributions</td>
+<td>Requires Git knowledge</td>
+</tr>
+<tr>
+<td>Fixes go straight to source</td>
+<td>Higher barrier to entry</td>
+</tr>
+<tr>
+<td>Creates PR for review</td>
+<td>Only for content fixes</td>
+</tr>
+<tr>
+<td>No separate system needed</td>
+<td>Not for questions/discussion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="best-for">Best For</h3>
+<ul>
+<li>Technical audiences comfortable with GitHub</li>
+<li>Open source documentation</li>
+<li>Catching typos and errors</li>
+</ul>
+<h2 id="4-hypothesis-annotations">4. Hypothesis Annotations</h2>
+<p><a href="https://web.hypothes.is/">Hypothesis</a> allows users to highlight specific text and add inline annotations.</p>
+<h3 id="installation">Installation</h3>
+<p>Add this script to your site (e.g., in <code>docs/js/extra.js</code> or a custom template):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://hypothes.is/embed.js&quot;</span> <span class="na">async</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>Or add to <code>mkdocs.yml</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">extra_javascript</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://hypothes.is/embed.js</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="how-it-works">How It Works</h3>
+<ol>
+<li>Users highlight any text on the page</li>
+<li>A sidebar appears for adding annotations</li>
+<li>Annotations are stored on Hypothesis servers</li>
+<li>Other users can see and reply to annotations</li>
+</ol>
+<h3 id="pros-and-cons_2">Pros and Cons</h3>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precise, contextual feedback</td>
+<td>Requires Hypothesis account</td>
+</tr>
+<tr>
+<td>Points to exact text</td>
+<td>Annotations are public by default</td>
+</tr>
+<tr>
+<td>Great for peer review</td>
+<td>External dependency</td>
+</tr>
+<tr>
+<td>Discussion threads</td>
+<td>May clutter the interface</td>
+</tr>
+</tbody>
+</table>
+<h3 id="best-for_1">Best For</h3>
+<ul>
+<li>Academic content</li>
+<li>Collaborative editing</li>
+<li>Peer review</li>
+<li>Pointing out specific confusing sentences</li>
+</ul>
+<h2 id="5-utterances">5. Utterances</h2>
+<p><a href="https://utteranc.es/">Utterances</a> is similar to Giscus but uses GitHub Issues instead of Discussions.</p>
+<h3 id="configuration_1">Configuration</h3>
+<p>Create <code>docs/overrides/partials/comments.html</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>{% if page.meta.comments %}
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://utteranc.es/client.js&quot;</span>
+        <span class="na">repo</span><span class="o">=</span><span class="s">&quot;username/repo&quot;</span>
+        <span class="na">issue-term</span><span class="o">=</span><span class="s">&quot;pathname&quot;</span>
+        <span class="na">theme</span><span class="o">=</span><span class="s">&quot;github-light&quot;</span>
+        <span class="na">crossorigin</span><span class="o">=</span><span class="s">&quot;anonymous&quot;</span>
+        <span class="na">async</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+{% endif %}
+</code></pre></div></td></tr></table></div>
+<h3 id="giscus-vs-utterances">Giscus vs Utterances</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Giscus</th>
+<th>Utterances</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Storage</td>
+<td>GitHub Discussions</td>
+<td>GitHub Issues</td>
+</tr>
+<tr>
+<td>Reactions</td>
+<td>Yes</td>
+<td>Limited</td>
+</tr>
+<tr>
+<td>Threading</td>
+<td>Full support</td>
+<td>Limited</td>
+</tr>
+<tr>
+<td>API</td>
+<td>GraphQL</td>
+<td>REST</td>
+</tr>
+<tr>
+<td>Repo requirement</td>
+<td>Discussions enabled</td>
+<td>Issues enabled</td>
+</tr>
+</tbody>
+</table>
+<h3 id="when-to-choose-utterances">When to Choose Utterances</h3>
+<ul>
+<li>Your repo doesn't have Discussions enabled</li>
+<li>You prefer Issues over Discussions</li>
+<li>You have an existing Utterances setup</li>
+</ul>
+<h2 id="6-google-forms">6. Google Forms</h2>
+<p>Embed a Google Form for structured feedback with specific questions.</p>
+<h3 id="creating-the-form">Creating the Form</h3>
+<ol>
+<li>Create a form at <a href="https://forms.google.com">forms.google.com</a></li>
+<li>Add questions relevant to your content</li>
+<li>Get the embed code</li>
+</ol>
+<h3 id="embedding-in-a-page">Embedding in a Page</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span>
+  <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true&quot;</span>
+  <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span>
+  <span class="na">height</span><span class="o">=</span><span class="s">&quot;600&quot;</span>
+  <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span>
+  <span class="na">marginheight</span><span class="o">=</span><span class="s">&quot;0&quot;</span>
+  <span class="na">marginwidth</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;</span>
+  Loading...
+<span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="example-questions-for-textbooks">Example Questions for Textbooks</h3>
+<ul>
+<li>What topic brought you to this page?</li>
+<li>Did you find what you were looking for? (Yes/No)</li>
+<li>How would you rate this explanation? (1-5)</li>
+<li>What's your experience level with this topic?</li>
+<li>What would you add or change?</li>
+</ul>
+<h3 id="pros-and-cons_3">Pros and Cons</h3>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structured responses</td>
+<td>Extra click to open form</td>
+</tr>
+<tr>
+<td>Custom questions</td>
+<td>Responses in separate system</td>
+</tr>
+<tr>
+<td>Easy to analyze</td>
+<td>No public discussion</td>
+</tr>
+<tr>
+<td>No GitHub required</td>
+<td>Requires Google account to create</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-github-issue-templates">7. GitHub Issue Templates</h2>
+<p>Create pre-filled issue templates for different types of feedback.</p>
+<h3 id="creating-templates">Creating Templates</h3>
+<p>Create <code>.github/ISSUE_TEMPLATE/feedback.yml</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Page Feedback</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Provide feedback on a documentation page</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;[Feedback]</span><span class="nv"> </span><span class="s">&quot;</span>
+<span class="nt">labels</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;feedback&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">body</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input</span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">page</span>
+<span class="w">    </span><span class="nt">attributes</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Page URL</span>
+<span class="w">      </span><span class="nt">placeholder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://example.com/page</span>
+<span class="w">    </span><span class="nt">validations</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dropdown</span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
+<span class="w">    </span><span class="nt">attributes</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Feedback Type</span>
+<span class="w">      </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Confusing explanation</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Missing information</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Error or typo</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Suggestion for improvement</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Other</span>
+<span class="w">    </span><span class="nt">validations</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">textarea</span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">details</span>
+<span class="w">    </span><span class="nt">attributes</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details</span>
+<span class="w">      </span><span class="nt">placeholder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Please describe your feedback...</span>
+<span class="w">    </span><span class="nt">validations</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="linking-from-pages">Linking from Pages</h3>
+<p>Add a feedback button to your pages:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[<span class="nt">Provide Feedback</span>](<span class="na">https://github.com/USERNAME/REPO/issues/new?template=feedback.yml&amp;title=[Feedback]+PAGE_TITLE</span>){ .md-button }
+</code></pre></div></td></tr></table></div>
+<h2 id="8-content-specific-questions">8. Content-Specific Questions</h2>
+<p>Different content types benefit from different feedback questions:</p>
+<table>
+<thead>
+<tr>
+<th>Content Type</th>
+<th>Question</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tutorial</td>
+<td>"Were you able to complete this?"</td>
+<td>Measures effectiveness</td>
+</tr>
+<tr>
+<td>Concept</td>
+<td>"Do you understand this now?"</td>
+<td>Checks clarity</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>"Did you find what you needed?"</td>
+<td>Checks completeness</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>"Was this example helpful?"</td>
+<td>Validates relevance</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>"Was this quiz fair?"</td>
+<td>Checks alignment with content</td>
+</tr>
+</tbody>
+</table>
+<h3 id="implementation">Implementation</h3>
+<p>Use different feedback widget notes per section via <code>.meta.yml</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># In tutorials/.meta.yml</span>
+<span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="c1"># Custom note could be added via template override</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="recommended-combinations">Recommended Combinations</h2>
+<h3 id="for-educational-content-textbooks">For Educational Content (Textbooks)</h3>
+<ol>
+<li><strong>Feedback widget</strong> - Quick sentiment on every page</li>
+<li><strong>Giscus comments</strong> - Detailed questions and discussions</li>
+<li><strong>Edit this page</strong> - Direct fixes from advanced users</li>
+<li><strong>Issue templates</strong> - Structured error reports</li>
+</ol>
+<h3 id="for-technical-documentation">For Technical Documentation</h3>
+<ol>
+<li><strong>Feedback widget</strong> - Quick "was this helpful?"</li>
+<li><strong>Edit this page</strong> - Direct contributions</li>
+<li><strong>GitHub Issues</strong> - Bug reports and feature requests</li>
+</ol>
+<h3 id="for-collaborative-projects">For Collaborative Projects</h3>
+<ol>
+<li><strong>Hypothesis</strong> - Inline annotations and peer review</li>
+<li><strong>Giscus comments</strong> - Page-level discussions</li>
+<li><strong>Edit this page</strong> - Direct contributions</li>
+</ol>
+<h2 id="viewing-and-analyzing-feedback">Viewing and Analyzing Feedback</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Where to View Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feedback Widget</td>
+<td>Google Analytics → Events → feedback</td>
+</tr>
+<tr>
+<td>Giscus</td>
+<td>GitHub → Discussions tab</td>
+</tr>
+<tr>
+<td>Edit This Page</td>
+<td>GitHub → Pull Requests</td>
+</tr>
+<tr>
+<td>Hypothesis</td>
+<td>hypothesis.is dashboard</td>
+</tr>
+<tr>
+<td>Utterances</td>
+<td>GitHub → Issues</td>
+</tr>
+<tr>
+<td>Google Forms</td>
+<td>Google Forms → Responses</td>
+</tr>
+<tr>
+<td>Issue Templates</td>
+<td>GitHub → Issues</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary">Summary</h2>
+<p>The best feedback system depends on your audience and goals:</p>
+<ul>
+<li><strong>Quick sentiment</strong>: Feedback widget</li>
+<li><strong>Detailed discussion</strong>: Giscus comments</li>
+<li><strong>Direct contributions</strong>: Edit this page</li>
+<li><strong>Contextual annotations</strong>: Hypothesis</li>
+<li><strong>Structured responses</strong>: Google Forms or Issue Templates</li>
+</ul>
+<p>This template implements the first three methods, with Giscus appearing when users click a feedback icon. This captures both quantitative data (Google Analytics) and qualitative feedback (GitHub Discussions) in a single, streamlined flow.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Feel free to share what you found helpful in the comments below or or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+Feedback%20Options+-+/feedback-options/"  target="_blank" rel="noopener">open an issue</a>.
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Please share details in the comments below or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+Feedback%20Options+-+/feedback-options/"  target="_blank" rel="noopener">open an issue</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../sample-page/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sample Page">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Sample Page
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../hypothesis-annotations/" class="md-footer__link md-footer__link--next" aria-label="Next: Hypothesis Annotations">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Hypothesis Annotations
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../js/extra.js"></script>
+      
+    
+  </body>
+</html>
