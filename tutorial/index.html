@@ -662,8 +662,49 @@
       giscus.setAttribute("data-theme", theme)
     }
 
-    // Register event handlers after document loaded
+    // Function to show Giscus comments
+    function showGiscusComments() {
+      var container = document.getElementById("giscus-container")
+      if (container) {
+        container.style.display = "block"
+        setTimeout(function() {
+          container.scrollIntoView({ behavior: "smooth", block: "start" })
+        }, 300)
+      }
+    }
+
+    // Use event capturing (third param = true) to catch events before disabled fieldset blocks them
+    document.addEventListener("click", function(e) {
+      var target = e.target.closest(".md-feedback__icon")
+      if (target) {
+        showGiscusComments()
+      }
+    }, true)
+
+    // Also listen for the feedback form submission via Material's custom event
     document.addEventListener("DOMContentLoaded", function() {
+      // Watch for changes to the feedback note visibility (Material shows note after click)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === "attributes" && mutation.attributeName === "hidden") {
+            var target = mutation.target
+            if (target.classList && target.classList.contains("md-feedback__note") === false &&
+                target.hasAttribute("data-md-value") && !target.hidden) {
+              showGiscusComments()
+            }
+          }
+        })
+      })
+
+      var feedbackNote = document.querySelector(".md-feedback__note")
+      if (feedbackNote) {
+        observer.observe(feedbackNote, {
+          attributes: true,
+          subtree: true,
+          attributeFilter: ["hidden"]
+        })
+      }
+
       // Handle palette changes for Giscus theme sync
       var paletteRef = document.querySelector("[data-md-component=palette]")
       if (paletteRef) {
@@ -685,21 +726,6 @@
           }
         })
       }
-
-      // Show Giscus comments when feedback icon is clicked
-      var feedbackButtons = document.querySelectorAll("[data-md-component=feedback] button")
-      feedbackButtons.forEach(function(button) {
-        button.addEventListener("click", function() {
-          var container = document.getElementById("giscus-container")
-          if (container) {
-            container.style.display = "block"
-            // Scroll to comments section
-            setTimeout(function() {
-              container.scrollIntoView({ behavior: "smooth", block: "start" })
-            }, 300)
-          }
-        })
-      })
     })
   </script>
 
