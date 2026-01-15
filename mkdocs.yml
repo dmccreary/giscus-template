@@ -18,6 +18,7 @@ nav:
   - Tutorial:
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
+    - Using the Giscus Installer Skill: tutorial/claude-giscus-installer-skill.md
     - Customizing Comment Pages: tutorial/customizing-comment-pages.md
     - Debugging: tutorial/debugging.md
   - License: license.md
