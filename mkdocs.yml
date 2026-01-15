@@ -12,9 +12,11 @@ edit_uri: 'blob/master/docs'
 nav:
   - Home: index.md
   - About: about.md
+  - Sample Page: sample-page.md
   - Tutorial:
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
+  - License: license.md
   - Glossary: glossary.md
   - Contact: contact.md
 

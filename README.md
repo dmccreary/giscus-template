@@ -1,55 +1,57 @@
-# Giscus Comments Integration for mkdocs-material
+# Giscus Comments Template for MkDocs Material
 
-This example shows how to add Giscus (GitHub Discussions-based comments)  to your mkdocs-material site.
+[![MkDocs](https://img.shields.io/badge/Made%20with-MkDocs-526CFE?logo=materialformkdocs)](https://www.mkdocs.org/)
+[![Material for MkDocs](https://img.shields.io/badge/Material%20for%20MkDocs-526CFE?logo=materialformkdocs)](https://squidfunk.github.io/mkdocs-material/)
+[![Claude Code](https://img.shields.io/badge/Built%20with-Claude%20Code-DA7857?logo=anthropic)](https://claude.ai/code)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-## Directory Structure
+## Overview
 
+This template repository provides a complete, working example of integrating [Giscus](https://giscus.app/) (GitHub Discussions-based comments) into MkDocs Material sites. It is designed for educators and developers building intelligent textbooks who want to add community-driven discussions to their documentation.
+
+The template includes:
+
+- Pre-configured Giscus integration with theme synchronization (light/dark mode)
+- Feedback widget that directs users to the comments section
+- Support for page-level and folder-level comment enabling
+- Step-by-step setup instructions for your own repository
+
+Whether you're building an online course, technical documentation, or an intelligent textbook, this template provides everything you need to foster community engagement through GitHub Discussions.
+
+## Features
+
+- **GitHub Discussions Integration** - Comments are stored as GitHub Discussions, providing full GitHub features
+- **Theme Synchronization** - Comments automatically match your site's light/dark mode
+- **Flexible Enabling** - Enable comments per-page via front matter or per-folder via `.meta.yml`
+- **Feedback Widget** - Integrated "Was this helpful?" widget that encourages discussion
+- **No Server Required** - Runs entirely through GitHub, no backend infrastructure needed
+- **Spam Protection** - GitHub authentication prevents anonymous spam
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.8+
+- A GitHub repository with Discussions enabled
+- [Giscus GitHub App](https://github.com/apps/giscus) installed on your repository
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/dmccreary/giscus-template.git
+cd giscus-template
 ```
-your-project/
-├── mkdocs.yml
-└── docs/
-    ├── overrides/
-    │   └── partials/
-    │       └── comments.html    # Giscus integration template
-    ├── index.md
-    └── sample-page.md           # Example page with comments enabled
+
+### Install Dependencies
+
+```bash
+pip install mkdocs mkdocs-material
 ```
 
-## Setup Instructions
+### Configure Giscus
 
-### Step 1: Enable GitHub Discussions
-
-1. Go to your GitHub repository
-2. Click **Settings** → **General**
-3. Scroll to **Features** section
-4. Check **Discussions**
-
-### Step 2: Install Giscus GitHub App
-
-1. Visit [https://github.com/apps/giscus](https://github.com/apps/giscus)
-2. Click **Install**
-3. Select your repository (or all repositories)
-4. Authorize the app
-
-### Step 3: Create a Discussion Category
-
-1. Go to your repository's **Discussions** tab
-2. Click the gear icon (⚙️) next to Categories
-3. Create a new category called **Comments** (or similar)
-4. Set format to **Announcement** (recommended - only maintainers can create new discussions, but anyone can comment)
-
-### Step 4: Generate Your Giscus Configuration
-
-1. Visit [https://giscus.app/](https://giscus.app/)
-2. Enter your repository (e.g., `dmccreary/intelligent-textbooks`)
-3. Select your Discussion Category (e.g., **Comments**)
-4. Choose mapping: **pathname** (recommended)
-5. Enable features you want (reactions, metadata)
-6. Copy the generated `<script>` snippet
-
-### Step 5: Update comments.html
-
-Replace the placeholder values in `docs/overrides/partials/comments.html`:
+1. Visit [giscus.app](https://giscus.app/) and configure for your repository
+2. Copy the generated values and update `docs/overrides/partials/comments.html`:
 
 ```html
 data-repo="YOUR_USERNAME/YOUR_REPO"
@@ -58,30 +60,45 @@ data-category="Comments"
 data-category-id="YOUR_CATEGORY_ID_HERE"
 ```
 
-Use the values from the Giscus configuration tool (Step 4).
+### Build and Serve Locally
 
-### Step 6: Update mkdocs.yml
-
-Ensure your `mkdocs.yml` includes:
-
-```yaml
-theme:
-  name: material
-  custom_dir: docs/overrides   # Required for theme overrides
-  palette:
-    - scheme: default          # Light/dark mode for theme sync
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+```bash
+mkdocs serve
 ```
 
-### Step 7: Enable Comments on Pages
+Open your browser to `http://localhost:8000`
 
-Add front matter to any page where you want comments:
+### Deploy to GitHub Pages
+
+```bash
+mkdocs gh-deploy
+```
+
+## Repository Structure
+
+```
+giscus-template/
+├── docs/
+│   ├── overrides/
+│   │   └── partials/
+│   │       └── comments.html    # Giscus integration template
+│   ├── css/
+│   │   └── extra.css            # Custom styles
+│   ├── js/
+│   │   └── extra.js             # Custom JavaScript
+│   ├── index.md                 # Home page
+│   ├── sample-page.md           # Example with comments enabled
+│   └── about.md                 # About page
+├── mkdocs.yml                   # MkDocs configuration
+├── CLAUDE.md                    # Claude Code guidance
+└── README.md                    # This file
+```
+
+## Enabling Comments
+
+### Per-Page
+
+Add front matter to any markdown file:
 
 ```yaml
 ---
@@ -90,61 +107,61 @@ comments: true
 
 # Your Page Title
 
-Your content here...
+Content here...
 ```
 
-## Enable Comments for Entire Folders
+### Per-Folder
 
-Use the [meta plugin](https://squidfunk.github.io/mkdocs-material/plugins/meta/) 
-to enable comments for all pages in a folder:
+Create a `.meta.yml` file in any folder (requires `meta` plugin):
 
-1. Add to `mkdocs.yml`:
-   ```yaml
-   plugins:
-     - meta
-   ```
+```yaml
+comments: true
+```
 
-2. Create `.meta.yml` in any folder:
-   ```yaml
-   comments: true
-   ```
+All pages in that folder will have comments enabled.
 
-All pages in that folder (and subfolders) will have comments enabled.
-
-## Giscus Configuration Options
+## Configuration Options
 
 | Option | Description |
 |--------|-------------|
-| `data-mapping="pathname"` | Creates one discussion per page URL |
-| `data-mapping="title"` | Creates one discussion per page title |
-| `data-reactions-enabled="1"` | Allow emoji reactions on comments |
-| `data-emit-metadata="1"` | Emit discussion metadata |
+| `data-mapping="pathname"` | One discussion per page URL (recommended) |
+| `data-mapping="title"` | One discussion per page title |
+| `data-reactions-enabled="1"` | Allow emoji reactions |
 | `data-input-position="top"` | Comment box at top (or "bottom") |
 | `data-theme="light"` | Initial theme (auto-syncs with palette) |
-| `data-loading="lazy"` | Load comments only when scrolled into view |
+| `data-loading="lazy"` | Load comments when scrolled into view |
 
-## Troubleshooting
+## Reporting Issues
 
-### Comments not appearing?
+Found a bug or have a suggestion? Please report it:
 
-- Verify `custom_dir: docs/overrides` is in mkdocs.yml
-- Check that the file path is exactly `docs/overrides/partials/comments.html`
-- Ensure front matter `comments: true` is at the top of your markdown file
-- Confirm Giscus app is installed on your repository
+[Open an Issue](https://github.com/dmccreary/giscus-template/issues)
 
-### Theme not syncing?
+## License
 
-- Make sure you have both light and dark palette schemes defined
-- The JavaScript in comments.html handles the sync automatically
+This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-### "Discussion not found" error?
+**You are free to:**
 
-- Verify your Discussion category exists
-- Check that category ID matches your configuration
-- Ensure the Giscus app has access to your repository
+- **Share** - copy and redistribute the material
+- **Adapt** - remix, transform, and build upon the material
 
-## Resources
+**Under the following terms:**
 
-- [Giscus Configuration Tool](https://giscus.app/)
-- [mkdocs-material Comment System Docs](https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/)
-- [Giscus GitHub Repository](https://github.com/giscus/giscus)
+- **Attribution** - Give appropriate credit with a link to the original
+- **NonCommercial** - No commercial use without permission
+- **ShareAlike** - Distribute contributions under the same license
+
+## Acknowledgements
+
+- [MkDocs](https://www.mkdocs.org/) - Static site generator for project documentation
+- [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) - Beautiful, responsive theme
+- [Giscus](https://giscus.app/) - GitHub Discussions-powered comments
+- [GitHub Pages](https://pages.github.com/) - Free hosting for open source projects
+
+## Contact
+
+**Dan McCreary**
+
+- LinkedIn: [linkedin.com/in/danmccreary](https://www.linkedin.com/in/danmccreary/)
+- GitHub: [@dmccreary](https://github.com/dmccreary)
