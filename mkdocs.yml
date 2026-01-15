@@ -84,7 +84,8 @@ extra:
           name: This page was helpful
           data: 1
           note: >-
-            Thanks for your feedback!
+            Thanks for your feedback! Feel free to share what you found helpful
+            in the comments below.
         - icon: material/emoticon-sad-outline
           name: This page could be improved
           data: 0
