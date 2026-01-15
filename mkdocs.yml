@@ -1,12 +1,12 @@
 # Sample mkdocs.yml with Giscus Comments Integration
 # Based on the Intelligent Textbooks project structure
 
-site_name: Building Intelligent Textbooks With AI
-site_description: 'Designing and building intelligent textbooks using open source tools.'
+site_name: Template for Giscus Comments Integration
+site_description: 'Template site for integrating Giscus comment and feedback with intelligent textbooks.'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
-site_url: 'https://dmccreary.github.io/intelligent-textbooks/'
-repo_url: 'https://github.com/dmccreary/intelligent-textbooks'
+site_url: 'https://dmccreary.github.io/giscus-template/'
+repo_url: 'https://github.com/dmccreary/giscus-template/'
 edit_uri: 'blob/master/docs'
 
 nav:
