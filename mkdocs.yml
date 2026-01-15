@@ -20,6 +20,7 @@ nav:
     - Getting Started: tutorial/getting-started.md
     - Using the Giscus Installer Skill: tutorial/claude-giscus-installer-skill.md
     - Customizing Comment Pages: tutorial/customizing-comment-pages.md
+    - Viewing Feedback in Google Analytics: tutorial/google-analytics.md
     - Debugging: tutorial/debugging.md
   - License: license.md
   - Glossary: glossary.md
