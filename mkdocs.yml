@@ -1,0 +1,94 @@
+# Sample mkdocs.yml with Giscus Comments Integration
+# Based on the Intelligent Textbooks project structure
+
+site_name: Building Intelligent Textbooks With AI
+site_description: 'Designing and building intelligent textbooks using open source tools.'
+site_author: 'Dan McCreary'
+repo_name: 'GitHub Repo'
+site_url: 'https://dmccreary.github.io/intelligent-textbooks/'
+repo_url: 'https://github.com/dmccreary/intelligent-textbooks'
+edit_uri: 'blob/master/docs'
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Tutorial:
+    - Introduction: tutorial/index.md
+    - Getting Started: tutorial/getting-started.md
+  - Glossary: glossary.md
+  - Contact: contact.md
+
+theme:
+  name: material
+  #logo: img/logo.png
+  #favicon: img/favicon.ico
+  # IMPORTANT: custom_dir enables theme overrides for Giscus
+  custom_dir: docs/overrides
+  palette:
+    # Light mode
+    - scheme: default
+      primary: 'blue'
+      accent: 'orange'
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: 'blue'
+      accent: 'orange'
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  include_sidebar: true
+  features:
+    - content.code.copy
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - toc.follow
+    - navigation.top
+    - navigation.footer
+    - content.action.edit
+
+plugins:
+  - search
+  - social
+  # Optional: Enable comments for entire folders via .meta.yml files
+  - meta
+
+markdown_extensions:
+  - admonition
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.highlight:
+      linenums: true
+
+extra_css:
+  - css/extra.css
+
+extra_javascript:
+  - js/extra.js
+
+extra:
+  analytics:
+    provider: google
+    property: G-D7X1XT7Z19
+    # Feedback widget (works alongside Giscus comments)
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Please share details in the comments below
+            or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+{title}+-+{url}" 
+            target="_blank" rel="noopener">open an issue</a>.

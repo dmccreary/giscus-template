@@ -1,0 +1,6 @@
+# .meta.yml - Place in any folder to enable comments for all pages
+# Requires the meta plugin in mkdocs.yml:
+#   plugins:
+#     - meta
+
+comments: true
