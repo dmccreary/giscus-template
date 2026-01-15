@@ -1,3 +1,6 @@
+---
+comments: false
+---
 # Giscus Mkdocs Template
 
 [Home](index.md)

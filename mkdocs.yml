@@ -16,6 +16,8 @@ nav:
   - Tutorial:
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
+    - Customizing Comment Pages: tutorial/customizing-comment-pages.md
+    - Debugging: tutorial/debugging.md
   - License: license.md
   - Glossary: glossary.md
   - Contact: contact.md
@@ -88,7 +90,9 @@ extra:
           data: 1
           note: >-
             Thanks for your feedback! Feel free to share what you found helpful
-            in the comments below.
+            in the comments below or
+            or <a href="https://github.com/dmccreary/intelligent-textbooks/issues/new/?title=[Feedback]+{title}+-+{url}" 
+            target="_blank" rel="noopener">open an issue</a>.
         - icon: material/emoticon-sad-outline
           name: This page could be improved
           data: 0
