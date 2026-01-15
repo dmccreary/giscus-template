@@ -6,7 +6,7 @@ site_description: 'Template site for integrating Giscus comment and feedback wit
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/giscus-template/'
-repo_url: 'https://github.com/dmccreary/giscus-template/'
+repo_url: 'https://github.com/dmccreary/giscus-template'
 edit_uri: 'blob/master/docs'
 
 nav:
@@ -77,7 +77,8 @@ extra_javascript:
 extra:
   analytics:
     provider: google
-    property: G-D7X1XT7Z19
+    # Configured on January 14th, 2026
+    property: G-ZWKPKVQWVG
     # Feedback widget (works alongside Giscus comments)
     feedback:
       title: Was this page helpful?
