@@ -1253,6 +1253,113 @@
   </form>
 
 
+  <!-- Giscus Comment Container - Hidden by default, shown when feedback is clicked -->
+  <div id="giscus-container" style="display: none;">
+    <h2 id="__comments">Comments</h2>
+
+    <!-- Giscus Comment System -->
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="dmccreary/giscus-template"
+      data-repo-id="R_kgDOQ6DmxQ"
+      data-category="Comments"
+      data-category-id="DIC_kwDOQ6Dmxc4C0-IF"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="1"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async
+    >
+    </script>
+  </div>
+
+  <!-- Synchronize Giscus theme with mkdocs-material palette (light/dark mode) -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // Function to show Giscus comments
+    function showGiscusComments() {
+      var container = document.getElementById("giscus-container")
+      if (container) {
+        container.style.display = "block"
+        setTimeout(function() {
+          container.scrollIntoView({ behavior: "smooth", block: "start" })
+        }, 300)
+      }
+    }
+
+    // Use event capturing (third param = true) to catch events before disabled fieldset blocks them
+    document.addEventListener("click", function(e) {
+      var target = e.target.closest(".md-feedback__icon")
+      if (target) {
+        showGiscusComments()
+      }
+    }, true)
+
+    // Also listen for the feedback form submission via Material's custom event
+    document.addEventListener("DOMContentLoaded", function() {
+      // Watch for changes to the feedback note visibility (Material shows note after click)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === "attributes" && mutation.attributeName === "hidden") {
+            var target = mutation.target
+            if (target.classList && target.classList.contains("md-feedback__note") === false &&
+                target.hasAttribute("data-md-value") && !target.hidden) {
+              showGiscusComments()
+            }
+          }
+        })
+      })
+
+      var feedbackNote = document.querySelector(".md-feedback__note")
+      if (feedbackNote) {
+        observer.observe(feedbackNote, {
+          attributes: true,
+          subtree: true,
+          attributeFilter: ["hidden"]
+        })
+      }
+
+      // Handle palette changes for Giscus theme sync
+      var paletteRef = document.querySelector("[data-md-component=palette]")
+      if (paletteRef) {
+        paletteRef.addEventListener("change", function() {
+          var palette = __md_get("__palette")
+          if (palette && typeof palette.color === "object") {
+            var theme = palette.color.scheme === "slate"
+              ? "transparent_dark"
+              : "light"
+
+            // Instruct Giscus to change theme
+            var frame = document.querySelector(".giscus-frame")
+            if (frame) {
+              frame.contentWindow.postMessage(
+                { giscus: { setConfig: { theme } } },
+                "https://giscus.app"
+              )
+            }
+          }
+        })
+      }
+    })
+  </script>
+
                 
               </article>
             </div>
